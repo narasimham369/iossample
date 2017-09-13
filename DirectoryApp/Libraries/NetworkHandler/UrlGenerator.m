@@ -169,6 +169,7 @@
             break;
         case EGLUEURLTYPESAYTHANKSFAVORITE:
             appendingUrl = sayThanksToFavoritedUsers;
+            break;
         case EGLUEURLTYPEWEBVIEWCONTENT:
             appendingUrl = [NSString stringWithFormat:@"%@",getWebViewContent];
             break;

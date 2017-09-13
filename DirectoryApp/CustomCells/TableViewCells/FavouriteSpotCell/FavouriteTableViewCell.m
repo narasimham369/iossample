@@ -54,37 +54,36 @@
     self.businessName.text = favourites.businessName;
     self.offerCount.text = [NSString stringWithFormat:@"%d Offers",favourites.offerCount];
     NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[myFavouiteSpotDetails valueForKey:@"businessID"]];
-    NSString *imageUrl = [NSString stringWithFormat:@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
+    
+    //54.214.172.192:8080
+    //testing purpose
+     NSString *imageUrl = [NSString stringWithFormat:@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
+    
+    //main server
+   // NSString *imageUrl = [NSString stringWithFormat:@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
     [self.businessLogo sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"noImage"] options:SDWebImageRefreshCached completed:nil];
-    
-    
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm:ss"];
     NSDate *currentDate = [NSDate date];
+    NSString *startTime=[NSString stringWithFormat:@"%@",[myFavouiteSpotDetails valueForKey:@"openingTime"]];
     NSString *time1=[NSString stringWithFormat:@"%@",[myFavouiteSpotDetails valueForKey:@"closingTime"]];
     NSString *time2 = [formatter stringFromDate:currentDate];
-    
+    NSDate *timeOfOpening= [formatter dateFromString:startTime];
     NSDate *timeOfClosing= [formatter dateFromString:time1];
     NSDate *CurrentTime = [formatter dateFromString:time2];
     
     NSComparisonResult result = [timeOfClosing compare:CurrentTime];
-    if(result == NSOrderedDescending)
+    NSComparisonResult result1 = [timeOfOpening compare:CurrentTime];
+    
+    if(result == NSOrderedDescending && result1== NSOrderedAscending)
     {
         self.shopStatus.backgroundColor=[UIColor colorWithRed:90.0f / 255.0f green:229.0f / 255.0f blue:168.0f / 255.0f alpha:1.0f];
         self.shopStatus.text=@"OPEN";
-    }
-    else if(result == NSOrderedAscending)
-    {
+    }else{
         self.shopStatus.backgroundColor=[UIColor colorWithRed:1.0f green:36.0f / 255.0f blue:36.0f / 255.0f alpha:1.0f];
         self.shopStatus.text=@"CLOSED";
     }
-    else
-    {
-        
-    }
-
-
 }
 - (IBAction)imageTapAction:(id)sender {
     if(self.favouriteSpotImageDelegate && [self.favouriteSpotImageDelegate respondsToSelector:@selector(favouriteSpotImageTapActionDelegateWithCellTag:andImage:withImageView:)]){

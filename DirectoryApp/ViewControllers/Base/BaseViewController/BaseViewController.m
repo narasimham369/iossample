@@ -36,10 +36,9 @@
 
 -(void)hidenavigationBar{
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
-    
 }
 
-- (void)showButtonOnLeftWithImageName:(NSString *)imageName {
+- (void)showButtonOnLeftWithImageName:(NSString *)imageName{
     UIImage *buttonImage;
     if(imageName.length == 0)
         buttonImage = [UIImage imageNamed:@"backImage"];

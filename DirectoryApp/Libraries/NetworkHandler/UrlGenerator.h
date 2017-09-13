@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 //static NSString *BaseUrl = @"http://bizdir.pumexinfotech.com/BizDirectoryApp/";
-static NSString *BaseUrl = @"http://admin.glucommunity.com/BizDirectoryApp/";
+
+//testing purpose
+static NSString *BaseUrl = @"http://54.214.172.192:8080/BizDirectoryApp/";
+
+//main server
+//static NSString *BaseUrl = @"http://admin.glucommunity.com/BizDirectoryApp/";
 
 static NSString *LoginUrl = @"login";
 static NSString *UserRegisterUrl = @"userRegistration";

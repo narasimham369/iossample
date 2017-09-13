@@ -102,7 +102,8 @@ NSString * const kNetworkFailFailNotification = @"com.CL.NetworkHandler.fail";
         if(self.bodyData!=nil)
             [urlRequest setHTTPBody:[self.bodyData dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]];
     }
-    urlRequest.timeoutInterval = 20;
+    urlRequest.timeoutInterval = 35;
+    [NSURLSessionConfiguration defaultSessionConfiguration].HTTPMaximumConnectionsPerHost = 10;
      [urlRequest setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     self.requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     [self.requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {

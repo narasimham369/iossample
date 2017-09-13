@@ -462,7 +462,14 @@
             CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(latitude, longitude);
             MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
             [annotation setCoordinate:coord];
-            NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
+            
+            //54.214.172.192:8080
+           
+            //testing purpose
+            NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
+            
+            //main server
+//            NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
             annotation.title=imageUrl;
             [self.apppleMapView addAnnotation:annotation];
             
@@ -481,7 +488,7 @@
 #pragma mark - Get MyBussinesses Api call
 
 -(void)GetMyBussinesses {
-    self.distanceToSearch=@"20";
+    self.distanceToSearch=@"50";
     NSString *category=[[NSUserDefaults standardUserDefaults] valueForKey:@"categoryId"];
     if([category length]==0){
         category=@"";

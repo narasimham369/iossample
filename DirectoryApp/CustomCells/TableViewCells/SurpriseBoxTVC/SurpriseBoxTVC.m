@@ -48,22 +48,43 @@
     NSAttributedString *nameText = [[NSAttributedString alloc] initWithString:surprise.business_name attributes:normalAttributes];
     NSString *imageUrl ;
     NSString *bussId=[NSString stringWithFormat:@"%@.jpg",[surpriseBoxDetails valueForKey:@"business_id"]];
-    imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",bussId];
+    
+    //testing purpose
+    imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",bussId];
+    
+    //main server
+  //  imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",bussId];
+    
+    
     if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:1]]) {
         descriptionText = [[NSAttributedString alloc] initWithString:@" has sent a special coupon for you." attributes:descriptionAttributes];
-        imageUrl = [NSString stringWithFormat:@"%@%d/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",surprise.couponid,surprise.imageName];
+       //testing purpose
+        imageUrl = [NSString stringWithFormat:@"%@%d/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",surprise.couponid,surprise.imageName];
+        
+        //main server
+        //imageUrl = [NSString stringWithFormat:@"%@%d/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",surprise.couponid,surprise.imageName];
+        
     }else if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:2]]) {
          nameText = [[NSAttributedString alloc] initWithString:surprise.shared_user attributes:normalAttributes];
         descriptionText = [[NSAttributedString alloc] initWithString:@" has shared with you a coupon!" attributes:descriptionAttributes];
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg?%@",[surpriseBoxDetails valueForKey:@"shared_user_id"],[surpriseBoxDetails valueForKey:@"shared_user_image_cache"]];
-        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        
+       //test purpose
+        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        
+        //main server
+//        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
 
     }else if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:3]]) {
         nameText = [[NSAttributedString alloc] initWithString:surprise.recommendedUser attributes:normalAttributes];
         descriptionText = [[NSAttributedString alloc] initWithString:@" has recommended you a great business!" attributes:descriptionAttributes];
         
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg?%@",[surpriseBoxDetails valueForKey:@"user_id"],[surpriseBoxDetails valueForKey:@"user_image_cache"]];
-        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        
+        //testing purpose
+        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        //main server
+       // imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
     }else if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:4]]) {
           descriptionText = [[NSAttributedString alloc] initWithString:@" Thank you for recommending us! We appreciate your support!" attributes:descriptionAttributes];
     }else if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:5]]) {

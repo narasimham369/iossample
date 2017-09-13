@@ -109,7 +109,7 @@
      BusinessUser *busUser = [BusinessUser getBusinessUser];
     NSString *urlParameter;
     if([[NSUserDefaults standardUserDefaults]boolForKey:isBusinessUser]){
-        urlParameter = [NSString stringWithFormat:@"userId=%lld&currentPassword=%@&newPassword=%@",busUser.business_id,self.currentPasswordText.text,self.passwordNewText.text];
+        urlParameter = [NSString stringWithFormat:@"userId=%lld&currentPassword=%@&newPassword=%@",busUser.bus_user_id,self.currentPasswordText.text,self.passwordNewText.text];
     }
     else{
     urlParameter = [NSString stringWithFormat:@"userId=%d&currentPassword=%@&newPassword=%@",user.user_id,self.currentPasswordText.text,self.passwordNewText.text];

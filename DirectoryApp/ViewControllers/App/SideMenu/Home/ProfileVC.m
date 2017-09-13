@@ -68,7 +68,15 @@
         self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",user.first_name,user.last_name];
         self.placeLabel.text=user.city;
         NSString *profileId=[NSString stringWithFormat:@"%d.jpg?%@",user.user_id,user.user_image_cache];
-        NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        
+        //54.214.172.192:8080
+        
+        //test purpose
+        
+         NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        
+        // main server
+//        NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         [self.profileImage sd_setImageWithURL:[NSURL URLWithString:finalProfImgUrlStg] placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] options:SDWebImageRefreshCached completed:nil];
         
     }
@@ -209,7 +217,12 @@
         user.user_image_cache=[NSString stringWithFormat:@"%@",[[responseObject valueForKey:@"data"] valueForKey:@"user_image_cache"]];
         [[CLCoreDataAdditions sharedInstance] saveEntity];
         NSString *profileId=[NSString stringWithFormat:@"%d.jpg?%@",user.user_id,[[responseObject valueForKey:@"data"] valueForKey:@"user_image_cache"]];
-        NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        
+        //54.214.172.192:8080
+        //testing purpose
+         NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        //main purpose
+//        NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         [self.profileImage sd_setImageWithURL:[NSURL URLWithString:finalProfImgUrlStg] placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] options:SDWebImageRefreshCached completed:nil];
         
          } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {

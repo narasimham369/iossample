@@ -529,15 +529,14 @@
     NSLog(@"%@",[self.selectedSubCategory valueForKey:@"categoryID"]);
     if([self.selectedSubCategory valueForKey:@"categoryID"]){
         categoryId = [self.selectedSubCategory valueForKey:@"categoryID"];
-    }
-    else{
-        categoryId = [NSNumber numberWithInt:self.busUser.categoryID];
+    }else{
+        categoryId = [NSNumber numberWithInt:self.busUser.mainCategoryId];
     }
     NSNumber *latitude = [NSNumber numberWithDouble:self.busUser.latitude];
     NSNumber *longitude = [NSNumber numberWithDouble:self.busUser.longitude];
     NSString *openingTime = [self.opening convertDateWithInitialFormat:@"HH:mm" ToDateWithFormat:@"HH:mm:ss"];
     NSString *closingTime = [self.closing convertDateWithInitialFormat:@"HH:mm" ToDateWithFormat:@"HH:mm:ss"];
-    NSString *updateBusinessProfUrlString = [NSString stringWithFormat:@"business_id=%@&business_name=%@&category_id=%@&business_address=%@&business_email=%@&business_phone=%@&website=%@&latitude=%@&longitude=%@&opening_time=%@&closing_time=%@&street=%@",[NSNumber numberWithLong:self.busUser.business_id],self.busUser.businessName,categoryId,@"sersw",self.busUser.email,self.busUser.phone,self.busUser.email,latitude,longitude,openingTime,closingTime,self.busUser.street];
+    NSString *updateBusinessProfUrlString = [NSString stringWithFormat:@"business_id=%@&business_name=%@&category_id=%@&business_address=%@&business_email=%@&business_phone=%@&website=%@&latitude=%@&longitude=%@&opening_time=%@&closing_time=%@&street=%@&city=%@&zip=%@",[NSNumber numberWithLong:self.busUser.business_id],self.busUser.businessName,categoryId,@"sersw",self.busUser.email,self.busUser.phone,self.busUser.email,latitude,longitude,openingTime,closingTime,self.busUser.street,self.busUser.city,self.busUser.zipCode];
     NSURL *updateBusinessProfileUrl = [[UrlGenerator sharedHandler] urlForRequestType:EGLUEURLTYPEUPDATEBUSINESSPROFILE withURLParameter:nil];
     NetworkHandler *networkHandler = [[NetworkHandler alloc]initWithRequestUrl:updateBusinessProfileUrl withBody:updateBusinessProfUrlString withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode){
@@ -551,8 +550,8 @@
             busUser.mainCategoryName =[self.selectedCategory valueForKey:@"categoryName"];
             busUser.subCategoryName = [self.selectedSubCategory valueForKey:@"categoryName"];
             [[CLCoreDataAdditions sharedInstance]saveEntity];
-            self.catList = [CategoryList getCategoriesWithCategoryId:[NSNumber numberWithInt:self.busUser.categoryID]];
-            self.subCtList =[SubCategories getSubCategoryWithParentID:[NSNumber numberWithInt:self.busUser.categoryID]];
+            self.catList = [CategoryList getCategoriesWithCategoryId:[NSNumber numberWithInt:self.busUser.mainCategoryId]];
+            self.subCtList =[SubCategories getSubCategoryWithParentID:[NSNumber numberWithInt:self.busUser.mainCategoryId]];
             for (SubCategories *sub in self.subCtList) {
                 if(sub.categoryID == self.busUser.subCategoryId)
                 {
@@ -566,7 +565,9 @@
         
     } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        [[Utilities standardUtilities]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
+        if(statusCode==1024){
+            [[Utilities standardUtilities]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
+        }
         
     }];
 }
@@ -581,7 +582,6 @@
         [self populateCategoryList];
         
     } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
-        
     }];
 }
     
@@ -615,7 +615,6 @@
         
         [self.subCategoryPicker reloadAllComponents];
     } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
-        
     }];
 }
     

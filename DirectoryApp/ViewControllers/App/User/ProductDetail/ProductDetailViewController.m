@@ -63,6 +63,7 @@
 @property (nonatomic) BOOL isFromImageRefresh;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet MKMapView *apppleMapView;
+
 @end
 
 @implementation ProductDetailViewController
@@ -171,7 +172,13 @@
             imageUrl = anotation.title;
             self.isFromImageRefresh=NO;
         }else{
-        imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
+            
+        //54.214.172.192:8080
+            //testing purpose
+            imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
+            
+        //main server
+       // imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
         }
         MarkerView.ImageUrl=imageUrl;
         [test addSubview:MarkerView];
@@ -235,26 +242,27 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm:ss"];
     NSDate *currentDate = [NSDate date];
+    NSString *startTime=[self.bussinessDetails valueForKey:@"opening_time"];
     NSString *time1=[self.bussinessDetails valueForKey:@"closing_time"];
     NSString *time2 = [formatter stringFromDate:currentDate];
     
+    NSDate *timeOfOpening= [formatter dateFromString:startTime];
     NSDate *timeOfClosing= [formatter dateFromString:time1];
     NSDate *CurrentTime = [formatter dateFromString:time2];
     
     NSComparisonResult result = [timeOfClosing compare:CurrentTime];
-    if(result == NSOrderedDescending)
+    NSComparisonResult result1 = [timeOfOpening compare:CurrentTime];
+    
+    if(result == NSOrderedDescending && result1== NSOrderedAscending)
     {
         self.openButton.backgroundColor=[UIColor colorWithRed:90.0f / 255.0f green:229.0f / 255.0f blue:168.0f / 255.0f alpha:1.0f];
         [self.openButton setTitle:@"OPEN" forState:UIControlStateNormal];
-    }
-    else if(result == NSOrderedAscending)
-    {
+
+    }else{
         self.openButton.backgroundColor=[UIColor colorWithRed:1.0f green:36.0f / 255.0f blue:36.0f / 255.0f alpha:1.0f];
         [self.openButton setTitle:@"CLOSED" forState:UIControlStateNormal];
     }
-    else
-    {
-    }
+  
     if([self.bussinessDetails valueForKey:@"favoritedStatus"]){
         if([[self.bussinessDetails valueForKey:@"favoritedStatus"]isEqual:[NSNumber numberWithInt:0]]){
             self.likeImageView.image=[UIImage imageNamed:@"likeSmall"];
@@ -323,7 +331,12 @@
         sendToVC.isFromProductDetail = YES;
         sendToVC.bussinessDetails=self.bussinessDetails;
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[self.bussinessDetails valueForKey:@"business_id"]];
-        NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+        
+        //54.214.172.192:8080
+        //testing purpose
+        NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+       // main server
+       // NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
         sendToVC.itemImageUrl=[NSURL URLWithString:temp];
         sendToVC.bussinessId=[NSString stringWithFormat:@"%@",[self.bussinessDetails valueForKey:@"business_id"]];
         
@@ -391,16 +404,67 @@
     cell = [nib objectAtIndex:0];
     cell.tag = indexPath.section;
     cell.homeDetailCellDelegate = self;
+    NSDictionary *dict =[self.myOffersArray objectAtIndex:indexPath.section];
+    NSString *savedStatutus = [dict valueForKey:@"savedStatus"];
+    NSString* expiry_date =[dict valueForKey:@"expiry_date"];
+    NSString *DescriptionEvery = [dict valueForKey:@"description"];
+    NSRange rangeValue = [DescriptionEvery rangeOfString:@"Every" options:NSCaseInsensitiveSearch];
+    
+    
+    
+   if([savedStatutus isEqual:[NSNumber numberWithInt:1]])
+   {
+        if([expiry_date isEqual:(NSString *)[NSNull null]])
+        {
+            
     cell.offerListDict=[self.myOffersArray objectAtIndex:indexPath.section];
+            _isAdjustCellhight =NO;
+            
+        }
+        else if (rangeValue.length > 0)
+        { NSLog(@"string contains every");
+            cell.offerListDict=[self.myOffersArray objectAtIndex:indexPath.section];
+             _isAdjustCellhight =NO;
+        }
+       else
+       {
+            cell.hidden = YES;
+            _isAdjustCellhight =YES;
+       }
+   }
+    else if([savedStatutus isEqual:[NSNumber numberWithInt:0]])
+    {
+      cell.offerListDict=[self.myOffersArray objectAtIndex:indexPath.section];
+        _isAdjustCellhight =NO;
+    }
+    else
+    {
+      cell.hidden = YES;
+        _isAdjustCellhight =YES;
+    }
+    
+    
+    
     return cell;
 }
+
+
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+   // HomeDetailTableViewCell *cell ;
+    if(_isAdjustCellhight== YES)
+    {
+        return 0;
+    }
+    else
+    {
     return 100;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -494,7 +558,14 @@
         CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(latitude, longitude);
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         [annotation setCoordinate:coord];
-        NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
+    
+   // 54.214.172.192:8080
+    
+    //test purpose
+    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
+    
+    //main server
+        //NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
         annotation.title=imageUrl;
         [self.apppleMapView addAnnotation:annotation];
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);

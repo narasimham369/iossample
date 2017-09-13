@@ -22,5 +22,6 @@ typedef NS_ENUM(NSInteger, IDTYPE ){
 @property (assign, nonatomic) BOOL isFromFavouriteSpots;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *TableActivityIndicator;
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+@property (assign, nonatomic) BOOL isAdjustCellhight;
 
 @end

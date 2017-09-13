@@ -718,7 +718,7 @@
                     busUser.subCategoryName =self.busUser.subCategoryName;
                 }
                 if(self.businessImageView.image){
-                   // [self callingUploadBusinessLogoImageApi];
+                    [self callingUploadBusinessLogoImageApi];
                 }
 
                 [[CLCoreDataAdditions sharedInstance]saveEntity];
@@ -760,6 +760,33 @@
     } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         [[Utilities standardUtilities]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
+        
+    }];
+}
+
+#pragma mark - Uploading Business Logo Image Api
+
+-(void)callingUploadBusinessLogoImageApi{
+    BusinessUser *busUser = [BusinessUser getBusinessUser];
+    UIImage *uploadingImage = [[Utilities standardUtilities]compressImage:self.businessLogoImage];
+    NSData *uploadImageData = UIImageJPEGRepresentation(uploadingImage, 0.1);
+    NSURL *uploadProfPicUrl = [NSURL URLWithString:BaseUrl];
+    NSMutableDictionary *dataDictionary = [[NSMutableDictionary alloc] init];
+    [dataDictionary setValue:[NSNumber numberWithLong:busUser.business_id] forKey:@"business_id"];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:uploadProfPicUrl withBody:dataDictionary withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    [networkHandler startUploadRequest:@"DirectoryProfilePhoto" withData:uploadImageData withType:fileTypeJPGImage withUrlParameter:uploadBusinesslogoImageUrl withFileLocation:@"imageFile" SuccessBlock:^(id responseObject) {
+        NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[NSNumber numberWithLong:busUser.business_id]];
+        //testing purose
+        //54.214.172.192:8080
+         NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+        
+        //mainserver
+       // NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+        [[SDImageCache sharedImageCache] removeImageForKey:imageUrl fromDisk:YES];
+        [[NSNotificationCenter defaultCenter]postNotificationName:DirectoryShowBusImage object:nil];
+    } ProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+        
+    } FailureBlock:^(NSString *errorDescription, id errorResponse) {
         
     }];
 }
