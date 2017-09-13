@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendToVC">
+            <connections>
+                <outlet property="backSearchView" destination="DTp-62-6nP" id="FLm-2W-sSu"/>
+                <outlet property="gradientView" destination="nB7-Og-wph" id="Th0-9H-auB"/>
+                <outlet property="loadImageView" destination="tpG-Ya-2x8" id="G7j-ew-m59"/>
+                <outlet property="sendListSearch" destination="LfL-FE-nJf" id="ZOU-z7-jPr"/>
+                <outlet property="sendtableView" destination="3m6-Sj-G1z" id="IwH-K3-eAK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3m6-Sj-G1z">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="YPq-8h-jLJ"/>
+                        <outlet property="delegate" destination="-1" id="sSY-xo-bzi"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTp-62-6nP">
+                    <rect key="frame" x="15" y="10" width="345" height="44"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-FE-nJf">
+                            <rect key="frame" x="1" y="1" width="343" height="42"/>
+                            <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="4dr-Bb-g2u"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LfL-FE-nJf" secondAttribute="bottom" constant="1" id="2dT-aI-XJ3"/>
+                        <constraint firstAttribute="trailing" secondItem="LfL-FE-nJf" secondAttribute="trailing" constant="1" id="Wrl-Wa-ahH"/>
+                        <constraint firstItem="LfL-FE-nJf" firstAttribute="leading" secondItem="DTp-62-6nP" secondAttribute="leading" constant="1" id="jAP-Rs-RYm"/>
+                        <constraint firstItem="LfL-FE-nJf" firstAttribute="top" secondItem="DTp-62-6nP" secondAttribute="top" constant="1" id="liY-ZF-t1J"/>
+                        <constraint firstAttribute="height" constant="44" id="tHy-gv-ZDc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-Og-wph">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tpG-Ya-2x8">
+                            <rect key="frame" x="366" y="19" width="1" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="2db-Wl-bF1"/>
+                                <constraint firstAttribute="width" constant="1" id="xHp-Yf-a0r"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29350385270000001" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="tpG-Ya-2x8" secondAttribute="trailing" constant="8" id="YQ4-CS-fH9"/>
+                        <constraint firstItem="tpG-Ya-2x8" firstAttribute="top" secondItem="nB7-Og-wph" secondAttribute="top" constant="19" id="nrJ-4f-FeI"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="HMk-Km-pB7" appends="YES" id="6tY-RD-3K7"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3m6-Sj-G1z" secondAttribute="bottom" id="0zv-H1-PRb"/>
+                <constraint firstItem="DTp-62-6nP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="4gi-gQ-zET"/>
+                <constraint firstAttribute="trailing" secondItem="3m6-Sj-G1z" secondAttribute="trailing" id="A5F-vH-zPe"/>
+                <constraint firstItem="3m6-Sj-G1z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FzP-1R-9VT"/>
+                <constraint firstItem="nB7-Og-wph" firstAttribute="top" secondItem="3m6-Sj-G1z" secondAttribute="top" id="Siy-ns-TOx"/>
+                <constraint firstItem="3m6-Sj-G1z" firstAttribute="top" secondItem="DTp-62-6nP" secondAttribute="bottom" constant="10" id="VBc-dN-NXI"/>
+                <constraint firstItem="nB7-Og-wph" firstAttribute="bottom" secondItem="3m6-Sj-G1z" secondAttribute="bottom" id="W67-RS-ERP"/>
+                <constraint firstAttribute="trailing" secondItem="DTp-62-6nP" secondAttribute="trailing" constant="15" id="gja-ac-bct"/>
+                <constraint firstItem="DTp-62-6nP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="iwp-QB-GxI"/>
+                <constraint firstItem="nB7-Og-wph" firstAttribute="leading" secondItem="3m6-Sj-G1z" secondAttribute="leading" id="tFJ-Eu-BpE"/>
+                <constraint firstItem="nB7-Og-wph" firstAttribute="trailing" secondItem="3m6-Sj-G1z" secondAttribute="trailing" id="zeC-Yv-loS"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="77.5"/>
+        </view>
+        <tapGestureRecognizer id="HMk-Km-pB7">
+            <connections>
+                <action selector="tapAction:" destination="-1" id="npa-W0-xyk"/>
+                <outlet property="delegate" destination="-1" id="d8c-lR-am4"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

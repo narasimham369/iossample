@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavedCouponViewController">
+            <connections>
+                <outlet property="couponsSearchBar" destination="64i-hK-Z4b" id="8qR-Kj-wCQ"/>
+                <outlet property="gradientView" destination="7gJ-Wm-ccB" id="b5j-Eq-3sS"/>
+                <outlet property="noSavedCouponslabel" destination="dQm-Kc-tXf" id="cxR-Bq-nCa"/>
+                <outlet property="savedCouponTableView" destination="D3a-v3-5m3" id="j9x-5W-UG7"/>
+                <outlet property="searchBar" destination="64i-hK-Z4b" id="j9e-l9-ZO9"/>
+                <outlet property="searchView" destination="8Vx-9N-ViU" id="aqS-RM-0Bt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Saved Coupons..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQm-Kc-tXf">
+                    <rect key="frame" x="123.5" y="323.5" width="128.5" height="21.5"/>
+                    <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
+                    <color key="textColor" red="0.23921568627450979" green="0.22352941176470587" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vx-9N-ViU">
+                    <rect key="frame" x="10" y="10" width="355" height="44"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="64i-hK-Z4b">
+                            <rect key="frame" x="1" y="1" width="353" height="42"/>
+                            <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="If1-Yj-V7Q"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="64i-hK-Z4b" secondAttribute="bottom" constant="1" id="Bhy-q8-LGE"/>
+                        <constraint firstItem="64i-hK-Z4b" firstAttribute="leading" secondItem="8Vx-9N-ViU" secondAttribute="leading" constant="1" id="Nzf-nz-620"/>
+                        <constraint firstItem="64i-hK-Z4b" firstAttribute="top" secondItem="8Vx-9N-ViU" secondAttribute="top" constant="1" id="OGu-6f-28m"/>
+                        <constraint firstAttribute="trailing" secondItem="64i-hK-Z4b" secondAttribute="trailing" constant="1" id="Oa1-1V-gqj"/>
+                        <constraint firstAttribute="height" constant="44" id="lh6-85-eNb"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xd-VV-0ow">
+                    <rect key="frame" x="10" y="64" width="355" height="603"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-v3-5m3">
+                            <rect key="frame" x="0.0" y="-1" width="355" height="604"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="8FT-E5-UXC"/>
+                                <outlet property="delegate" destination="-1" id="xgb-XX-MFr"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="D3a-v3-5m3" firstAttribute="leading" secondItem="1Xd-VV-0ow" secondAttribute="leading" id="dEL-WN-PCE"/>
+                        <constraint firstAttribute="bottom" secondItem="D3a-v3-5m3" secondAttribute="bottom" id="e1z-G7-gTk"/>
+                        <constraint firstItem="D3a-v3-5m3" firstAttribute="top" secondItem="1Xd-VV-0ow" secondAttribute="top" constant="-1" id="nNd-PR-ble"/>
+                        <constraint firstAttribute="trailing" secondItem="D3a-v3-5m3" secondAttribute="trailing" id="ubk-Ul-Hvi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gJ-Wm-ccB">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29452054794520549" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="wgi-mG-9q7" appends="YES" id="cbq-JR-bWH"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="1Xd-VV-0ow" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="1PN-0O-xi7"/>
+                <constraint firstAttribute="trailing" secondItem="8Vx-9N-ViU" secondAttribute="trailing" constant="10" id="C8M-Td-Ll4"/>
+                <constraint firstItem="dQm-Kc-tXf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ds0-7p-nuS"/>
+                <constraint firstItem="8Vx-9N-ViU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="NYF-U3-ebg"/>
+                <constraint firstAttribute="bottom" secondItem="7gJ-Wm-ccB" secondAttribute="bottom" id="Nip-KZ-Plt"/>
+                <constraint firstItem="8Vx-9N-ViU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="QUw-fQ-1UD"/>
+                <constraint firstItem="7gJ-Wm-ccB" firstAttribute="top" secondItem="8Vx-9N-ViU" secondAttribute="bottom" constant="10" id="Y4M-1B-ObL"/>
+                <constraint firstAttribute="trailing" secondItem="7gJ-Wm-ccB" secondAttribute="trailing" id="ZU6-RO-Aiy"/>
+                <constraint firstAttribute="bottom" secondItem="1Xd-VV-0ow" secondAttribute="bottom" id="ZUm-Gu-C8L"/>
+                <constraint firstItem="dQm-Kc-tXf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n17-PQ-1eS"/>
+                <constraint firstItem="7gJ-Wm-ccB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rBq-9O-sx2"/>
+                <constraint firstItem="1Xd-VV-0ow" firstAttribute="top" secondItem="8Vx-9N-ViU" secondAttribute="bottom" constant="10" id="wGp-sO-mtf"/>
+                <constraint firstAttribute="trailing" secondItem="1Xd-VV-0ow" secondAttribute="trailing" constant="10" id="xdD-hR-XOW"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+        <tapGestureRecognizer id="wgi-mG-9q7">
+            <connections>
+                <action selector="tapAction:" destination="-1" id="YVR-mh-yce"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

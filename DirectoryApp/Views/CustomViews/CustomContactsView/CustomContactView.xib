@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomContactView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-S1-oQY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMw-M5-x2t">
+                            <rect key="frame" x="50" y="194" width="275" height="280"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9yI-hH-F4V">
+                                    <rect key="frame" x="0.0" y="30" width="275" height="190"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="190" id="kXk-Zk-jE5"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="mXM-NP-WiV"/>
+                                        <outlet property="delegate" destination="-1" id="gWw-of-dPw"/>
+                                    </connections>
+                                </tableView>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o3-Yx-fEM">
+                                    <rect key="frame" x="78" y="230" width="120" height="30"/>
+                                    <color key="backgroundColor" red="0.13725490200000001" green="0.62352941179999999" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="ShZ-LI-gdx"/>
+                                        <constraint firstAttribute="height" constant="30" id="bnn-Zp-7YL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="SEND">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sendButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="OAs-DG-eRK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="8o3-Yx-fEM" secondAttribute="bottom" constant="20" id="1yH-Md-5TU"/>
+                                <constraint firstAttribute="trailing" secondItem="9yI-hH-F4V" secondAttribute="trailing" id="7np-7x-SOR"/>
+                                <constraint firstItem="9yI-hH-F4V" firstAttribute="leading" secondItem="oMw-M5-x2t" secondAttribute="leading" id="EId-jn-yPB"/>
+                                <constraint firstItem="8o3-Yx-fEM" firstAttribute="centerX" secondItem="9yI-hH-F4V" secondAttribute="centerX" id="YP5-MF-9Rk"/>
+                                <constraint firstItem="9yI-hH-F4V" firstAttribute="top" secondItem="oMw-M5-x2t" secondAttribute="top" constant="30" id="mBd-Jx-30n"/>
+                                <constraint firstItem="8o3-Yx-fEM" firstAttribute="top" secondItem="9yI-hH-F4V" secondAttribute="bottom" constant="10" id="ojM-C7-pkM"/>
+                                <constraint firstItem="9yI-hH-F4V" firstAttribute="centerX" secondItem="oMw-M5-x2t" secondAttribute="centerX" id="ybX-b5-vzO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29350385270000001" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="oMw-M5-x2t" firstAttribute="centerY" secondItem="HLL-S1-oQY" secondAttribute="centerY" id="0sj-zV-ned"/>
+                        <constraint firstItem="oMw-M5-x2t" firstAttribute="leading" secondItem="HLL-S1-oQY" secondAttribute="leading" constant="50" id="1rA-pQ-wVf"/>
+                        <constraint firstAttribute="trailing" secondItem="oMw-M5-x2t" secondAttribute="trailing" constant="50" id="2xa-YV-SDQ"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="y7O-4J-ns1" appends="YES" id="3XX-Rr-74H"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HLL-S1-oQY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2G3-ha-Her"/>
+                <constraint firstAttribute="bottom" secondItem="HLL-S1-oQY" secondAttribute="bottom" id="8zU-bb-z4u"/>
+                <constraint firstItem="HLL-S1-oQY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OOb-0l-gj3"/>
+                <constraint firstAttribute="trailing" secondItem="HLL-S1-oQY" secondAttribute="trailing" id="k91-H9-A5r"/>
+            </constraints>
+            <connections>
+                <outlet property="customView" destination="oMw-M5-x2t" id="j1j-Da-SSS"/>
+                <outlet property="sendButton" destination="8o3-Yx-fEM" id="0dP-YK-aGf"/>
+                <outlet property="tableViewContact" destination="9yI-hH-F4V" id="CY0-cq-mxT"/>
+                <outlet property="tapGesture" destination="y7O-4J-ns1" id="ZwJ-dd-Lkn"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+        <tapGestureRecognizer id="y7O-4J-ns1">
+            <connections>
+                <action selector="tapAction:" destination="iN0-l3-epB" id="Y77-33-ZbK"/>
+                <outlet property="delegate" destination="-1" id="d5B-kL-rl3"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

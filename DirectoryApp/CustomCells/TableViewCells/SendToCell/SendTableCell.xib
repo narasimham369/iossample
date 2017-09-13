@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+        <array key="Dosis-SemiBold.otf">
+            <string>Dosis-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="SendTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="482" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="482" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyImage" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-Te-KaO">
+                        <rect key="frame" x="20" y="28" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Hpi-Dz-80S"/>
+                            <constraint firstAttribute="height" constant="50" id="fi1-Zx-fpN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0J4-Fz-aQS">
+                        <rect key="frame" x="20" y="28" width="50" height="50"/>
+                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-Zi-ckD">
+                        <rect key="frame" x="402" y="36" width="60" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Ccm-WB-RvJ"/>
+                            <constraint firstAttribute="width" constant="60" id="Sih-oL-Qdj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="15"/>
+                        <state key="normal" title="SEND">
+                            <color key="titleColor" red="0.14117647059999999" green="0.74117647060000003" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="sendButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CHn-sE-wuY"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcc-yq-6oL">
+                        <rect key="frame" x="85" y="33" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="19"/>
+                        <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-9K-FZb">
+                        <rect key="frame" x="85" y="73" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="16"/>
+                        <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkX-Bz-YFK">
+                        <rect key="frame" x="20" y="104" width="442" height="1"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7hT-8V-ws6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0J4-Fz-aQS" firstAttribute="top" secondItem="Yjh-Te-KaO" secondAttribute="top" id="23s-Qn-hcP"/>
+                    <constraint firstItem="0J4-Fz-aQS" firstAttribute="trailing" secondItem="Yjh-Te-KaO" secondAttribute="trailing" id="58j-0Y-7Pz"/>
+                    <constraint firstItem="Yjh-Te-KaO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5yb-H6-FjT"/>
+                    <constraint firstItem="OU8-Zi-ckD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vcc-yq-6oL" secondAttribute="trailing" constant="5" id="8Ts-z3-NtV"/>
+                    <constraint firstItem="Yjh-Te-KaO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="DwR-JU-8wo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="OU8-Zi-ckD" secondAttribute="trailing" constant="12" id="Giu-db-Jut"/>
+                    <constraint firstItem="CkX-Bz-YFK" firstAttribute="leading" secondItem="Yjh-Te-KaO" secondAttribute="leading" id="Hbe-u8-zFE"/>
+                    <constraint firstItem="Vcc-yq-6oL" firstAttribute="leading" secondItem="Yjh-Te-KaO" secondAttribute="trailing" constant="15" id="IvW-gH-uzm"/>
+                    <constraint firstItem="zLr-9K-FZb" firstAttribute="bottom" secondItem="Yjh-Te-KaO" secondAttribute="bottom" constant="-5" id="Jfd-Qn-WSf"/>
+                    <constraint firstItem="CkX-Bz-YFK" firstAttribute="trailing" secondItem="OU8-Zi-ckD" secondAttribute="trailing" id="LCT-6l-vu4"/>
+                    <constraint firstItem="0J4-Fz-aQS" firstAttribute="bottom" secondItem="Yjh-Te-KaO" secondAttribute="bottom" id="Noc-of-Mwx"/>
+                    <constraint firstItem="zLr-9K-FZb" firstAttribute="leading" secondItem="Vcc-yq-6oL" secondAttribute="leading" id="Sip-Xp-3Nk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CkX-Bz-YFK" secondAttribute="bottom" constant="-8" id="Z6b-rj-3uM"/>
+                    <constraint firstItem="0J4-Fz-aQS" firstAttribute="leading" secondItem="Yjh-Te-KaO" secondAttribute="leading" id="cTA-xY-N2X"/>
+                    <constraint firstItem="OU8-Zi-ckD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zLr-9K-FZb" secondAttribute="trailing" constant="3" id="eJm-aa-JK5"/>
+                    <constraint firstItem="Vcc-yq-6oL" firstAttribute="top" secondItem="Yjh-Te-KaO" secondAttribute="top" constant="5" id="npr-S9-KST"/>
+                    <constraint firstItem="OU8-Zi-ckD" firstAttribute="centerY" secondItem="Yjh-Te-KaO" secondAttribute="centerY" id="sew-0I-acc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstLetterNameLabel" destination="0J4-Fz-aQS" id="kEW-Ml-H1R"/>
+                <outlet property="nameLabel" destination="Vcc-yq-6oL" id="jI9-iQ-1Y5"/>
+                <outlet property="phoneNumberLabel" destination="zLr-9K-FZb" id="z2F-0T-p2I"/>
+                <outlet property="profileIcon" destination="Yjh-Te-KaO" id="5Eq-55-XSD"/>
+                <outlet property="sendButton" destination="OU8-Zi-ckD" id="8Dt-4K-tHQ"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="47"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dummyImage" width="160" height="200"/>
+    </resources>
+</document>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+        <array key="Dosis-SemiBold.otf">
+            <string>Dosis-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinessFavouritesVC">
+            <connections>
+                <outlet property="gradientView" destination="GR5-le-9Ol" id="Z47-gD-Yh4"/>
+                <outlet property="moreButtonView" destination="qao-An-9fV" id="fe1-fs-Sx2"/>
+                <outlet property="noRecomendationLabel" destination="MYm-Xy-oxH" id="r7g-aZ-bbm"/>
+                <outlet property="recommendTableView" destination="NZo-Zj-7Wd" id="Pgm-oX-4t0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZo-Zj-7Wd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Fal-Dd-AxR"/>
+                        <outlet property="delegate" destination="-1" id="VOK-RN-lws"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qao-An-9fV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sayThanks" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-MJ-cBL">
+                            <rect key="frame" x="70" y="30" width="35" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="Rlv-7T-6Z7"/>
+                                <constraint firstAttribute="width" constant="35" id="uYO-rd-5J7"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="specialCoupon" translatesAutoresizingMaskIntoConstraints="NO" id="Rrd-Td-NO7">
+                            <rect key="frame" x="267" y="30" width="38" height="31"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Special Coupon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-Xz-62v">
+                            <rect key="frame" x="228" y="81" width="116" height="18"/>
+                            <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="14"/>
+                            <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say Thanks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfV-ol-28t">
+                            <rect key="frame" x="56.5" y="81" width="63.5" height="18"/>
+                            <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="14"/>
+                            <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd5-6w-Le8">
+                            <rect key="frame" x="190" y="0.0" width="185" height="129"/>
+                            <connections>
+                                <action selector="specialCouponButtonAction:" destination="-1" eventType="touchUpInside" id="e3R-vl-4Wi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5t-Te-QY6">
+                            <rect key="frame" x="0.0" y="0.0" width="185" height="129"/>
+                            <connections>
+                                <action selector="thanksButtonAction:" destination="-1" eventType="touchUpInside" id="7F3-Hk-ZjO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Rrd-Td-NO7" secondAttribute="trailing" constant="70" id="1mI-uK-0Sf"/>
+                        <constraint firstItem="Jd5-6w-Le8" firstAttribute="leading" secondItem="L5t-Te-QY6" secondAttribute="trailing" constant="5" id="1r5-h8-D2E"/>
+                        <constraint firstAttribute="bottom" secondItem="zfV-ol-28t" secondAttribute="bottom" constant="30" id="5zA-P4-huZ"/>
+                        <constraint firstItem="Jd5-6w-Le8" firstAttribute="top" secondItem="L5t-Te-QY6" secondAttribute="top" id="5zn-q0-Y4c"/>
+                        <constraint firstItem="UiN-MJ-cBL" firstAttribute="leading" secondItem="qao-An-9fV" secondAttribute="leading" constant="70" id="8Iv-pB-2Qe"/>
+                        <constraint firstItem="fVY-Xz-62v" firstAttribute="top" secondItem="Rrd-Td-NO7" secondAttribute="bottom" constant="20" id="8dU-wb-2qt"/>
+                        <constraint firstAttribute="bottom" secondItem="L5t-Te-QY6" secondAttribute="bottom" id="I4l-Un-13f"/>
+                        <constraint firstItem="L5t-Te-QY6" firstAttribute="leading" secondItem="qao-An-9fV" secondAttribute="leading" id="KjO-dN-pvN"/>
+                        <constraint firstItem="L5t-Te-QY6" firstAttribute="top" secondItem="qao-An-9fV" secondAttribute="top" id="O8q-kD-dRg"/>
+                        <constraint firstItem="Rrd-Td-NO7" firstAttribute="top" secondItem="UiN-MJ-cBL" secondAttribute="top" id="Ywk-gY-6Wk"/>
+                        <constraint firstItem="Jd5-6w-Le8" firstAttribute="bottom" secondItem="L5t-Te-QY6" secondAttribute="bottom" id="ZKZ-cX-4Ek"/>
+                        <constraint firstItem="zfV-ol-28t" firstAttribute="centerX" secondItem="UiN-MJ-cBL" secondAttribute="centerX" id="hjQ-GD-twL"/>
+                        <constraint firstItem="zfV-ol-28t" firstAttribute="top" secondItem="fVY-Xz-62v" secondAttribute="top" id="lUf-Mi-R7b"/>
+                        <constraint firstItem="Jd5-6w-Le8" firstAttribute="width" secondItem="L5t-Te-QY6" secondAttribute="width" id="s3A-dg-fZe"/>
+                        <constraint firstItem="UiN-MJ-cBL" firstAttribute="top" secondItem="qao-An-9fV" secondAttribute="top" constant="30" id="sMj-JB-9Xp"/>
+                        <constraint firstItem="fVY-Xz-62v" firstAttribute="centerX" secondItem="Rrd-Td-NO7" secondAttribute="centerX" id="ubP-XE-ChR"/>
+                        <constraint firstAttribute="trailing" secondItem="Jd5-6w-Le8" secondAttribute="trailing" id="vv6-bO-avr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-le-9Ol">
+                    <rect key="frame" x="0.0" y="129" width="375" height="538"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2909888698630137" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="jo7-HO-JJS" appends="YES" id="18X-2Q-WzQ"/>
+                    </connections>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No recommendations found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYm-Xy-oxH">
+                    <rect key="frame" x="0.0" y="323" width="375" height="21.5"/>
+                    <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
+                    <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MYm-Xy-oxH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0VB-31-6EW"/>
+                <constraint firstItem="GR5-le-9Ol" firstAttribute="leading" secondItem="qao-An-9fV" secondAttribute="leading" id="2QL-Mo-XBb"/>
+                <constraint firstItem="qao-An-9fV" firstAttribute="trailing" secondItem="NZo-Zj-7Wd" secondAttribute="trailing" id="360-A3-FtJ"/>
+                <constraint firstItem="qao-An-9fV" firstAttribute="top" secondItem="NZo-Zj-7Wd" secondAttribute="top" id="47B-m3-2Ox"/>
+                <constraint firstItem="NZo-Zj-7Wd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="90J-wb-58m"/>
+                <constraint firstAttribute="trailing" secondItem="NZo-Zj-7Wd" secondAttribute="trailing" id="9Zm-lT-kI3"/>
+                <constraint firstItem="qao-An-9fV" firstAttribute="leading" secondItem="NZo-Zj-7Wd" secondAttribute="leading" id="Fcc-7r-CXf"/>
+                <constraint firstAttribute="trailing" secondItem="MYm-Xy-oxH" secondAttribute="trailing" id="GFv-wg-xMY"/>
+                <constraint firstAttribute="bottom" secondItem="NZo-Zj-7Wd" secondAttribute="bottom" id="JPz-Ed-lPx"/>
+                <constraint firstItem="MYm-Xy-oxH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tro-jP-OXs"/>
+                <constraint firstItem="GR5-le-9Ol" firstAttribute="top" secondItem="qao-An-9fV" secondAttribute="bottom" id="gIO-ZN-jbS"/>
+                <constraint firstItem="MYm-Xy-oxH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gsf-fr-xsP"/>
+                <constraint firstItem="GR5-le-9Ol" firstAttribute="trailing" secondItem="qao-An-9fV" secondAttribute="trailing" id="t7X-jY-CRO"/>
+                <constraint firstItem="GR5-le-9Ol" firstAttribute="bottom" secondItem="NZo-Zj-7Wd" secondAttribute="bottom" id="tac-7i-uEK"/>
+                <constraint firstItem="NZo-Zj-7Wd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="u7o-hC-7fu"/>
+            </constraints>
+        </view>
+        <tapGestureRecognizer id="jo7-HO-JJS">
+            <connections>
+                <action selector="tapAction:" destination="-1" id="0cN-Oi-JCN"/>
+                <outlet property="delegate" destination="-1" id="sYL-uo-MWg"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="sayThanks" width="35" height="38"/>
+        <image name="specialCoupon" width="38" height="31"/>
+    </resources>
+</document>

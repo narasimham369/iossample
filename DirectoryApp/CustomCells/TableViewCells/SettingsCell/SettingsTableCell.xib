@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Medium.otf">
+            <string>Dosis-Medium</string>
+        </array>
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="SettingsTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="468" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="468" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="businessCategoryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-oW-m71">
+                        <rect key="frame" x="20" y="47" width="20" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Ntt-tI-zFO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ydudryur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEr-F1-0Tx">
+                        <rect key="frame" x="70" y="47" width="52" height="19"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="15"/>
+                        <color key="textColor" red="0.23921568627450979" green="0.22352941176470587" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHz-1I-b4u">
+                        <rect key="frame" x="373.5" y="33.5" width="34.5" height="14"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="11"/>
+                        <color key="textColor" red="0.13725490196078433" green="0.62352941176470589" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9x6-Bi-Yoh">
+                        <rect key="frame" x="412" y="33.5" width="36" height="14"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="11"/>
+                        <color key="textColor" red="0.13725490196078433" green="0.62352941176470589" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pepsi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evz-Ex-40t">
+                        <rect key="frame" x="70" y="76" width="26.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="13"/>
+                        <color key="textColor" red="0.23921568627450979" green="0.22352941176470587" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuG-br-TBd">
+                        <rect key="frame" x="415" y="75" width="25" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="m5L-BA-XAK"/>
+                            <constraint firstAttribute="width" constant="25" id="uc0-vf-zMx"/>
+                        </constraints>
+                        <state key="normal" image="downArrowIcon"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY7-ie-Es7">
+                        <rect key="frame" x="0.0" y="112" width="468" height="1"/>
+                        <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="HmT-Ci-EcT"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYC-aj-gCi">
+                        <rect key="frame" x="448" y="56.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="12"/>
+                        <color key="textColor" red="0.23921568627450979" green="0.22352941176470587" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rtygt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PO-gS-cpW">
+                        <rect key="frame" x="20" y="46" width="32" height="21.5"/>
+                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="17"/>
+                        <color key="textColor" red="0.13725490200000001" green="0.62352941179999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-7q-dcD">
+                        <rect key="frame" x="412" y="47.5" width="36" height="18"/>
+                        <color key="textColor" red="0.36470588240000001" green="0.34901960780000002" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="Vph-9x-2qH"/>
+                        </connections>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsM-R0-naR">
+                        <rect key="frame" x="372" y="47.5" width="36" height="18"/>
+                        <color key="textColor" red="0.36470588240000001" green="0.34901960780000002" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="FFt-6Q-YWT"/>
+                        </connections>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2EI-ao-88o">
+                        <rect key="frame" x="230" y="49" width="8" height="17"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="Ptv-xc-ooe"/>
+                        </connections>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXu-CN-Faw">
+                        <rect key="frame" x="230" y="68" width="8" height="17"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="3ST-f1-KQP"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jKg-oW-m71" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2qQ-Yc-GBU"/>
+                    <constraint firstItem="vsM-R0-naR" firstAttribute="trailing" secondItem="dHz-1I-b4u" secondAttribute="trailing" id="4ov-fX-IUI"/>
+                    <constraint firstItem="jKg-oW-m71" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="4rn-e6-ssm"/>
+                    <constraint firstItem="9x6-Bi-Yoh" firstAttribute="trailing" secondItem="pYC-aj-gCi" secondAttribute="trailing" id="4tN-yj-fi4"/>
+                    <constraint firstItem="Evz-Ex-40t" firstAttribute="leading" secondItem="vEr-F1-0Tx" secondAttribute="leading" id="6Vg-64-aG3"/>
+                    <constraint firstItem="vsM-R0-naR" firstAttribute="top" secondItem="dHz-1I-b4u" secondAttribute="bottom" id="8TT-Lj-iq3"/>
+                    <constraint firstItem="Xcm-7q-dcD" firstAttribute="trailing" secondItem="9x6-Bi-Yoh" secondAttribute="trailing" id="8oi-40-Kuc"/>
+                    <constraint firstItem="vEr-F1-0Tx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CXF-UZ-Yxj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pYC-aj-gCi" secondAttribute="trailing" constant="12" id="ChR-sK-9QH"/>
+                    <constraint firstItem="Xcm-7q-dcD" firstAttribute="width" secondItem="vsM-R0-naR" secondAttribute="width" id="FYB-4j-UNG"/>
+                    <constraint firstItem="pYC-aj-gCi" firstAttribute="centerY" secondItem="vEr-F1-0Tx" secondAttribute="centerY" id="ImB-QC-m4h"/>
+                    <constraint firstItem="Xcm-7q-dcD" firstAttribute="leading" secondItem="9x6-Bi-Yoh" secondAttribute="leading" id="Km5-vL-djX"/>
+                    <constraint firstItem="0PO-gS-cpW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LIt-y5-puZ"/>
+                    <constraint firstItem="vuG-br-TBd" firstAttribute="centerY" secondItem="Evz-Ex-40t" secondAttribute="centerY" id="MEF-Xf-dRD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zY7-ie-Es7" secondAttribute="trailing" constant="-8" id="Or2-wB-mZZ"/>
+                    <constraint firstItem="vsM-R0-naR" firstAttribute="centerY" secondItem="jKg-oW-m71" secondAttribute="centerY" id="PVY-Ki-s3l"/>
+                    <constraint firstItem="vEr-F1-0Tx" firstAttribute="leading" secondItem="jKg-oW-m71" secondAttribute="trailing" constant="30" id="QjS-Jw-4ss"/>
+                    <constraint firstItem="Xcm-7q-dcD" firstAttribute="centerY" secondItem="vsM-R0-naR" secondAttribute="centerY" id="RSl-sc-mGG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zY7-ie-Es7" secondAttribute="bottom" constant="-8" id="SPJ-8r-j9X"/>
+                    <constraint firstItem="2EI-ao-88o" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wfo-bR-w2o"/>
+                    <constraint firstItem="2EI-ao-88o" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="aii-Rg-87u"/>
+                    <constraint firstItem="Xcm-7q-dcD" firstAttribute="centerY" secondItem="jKg-oW-m71" secondAttribute="centerY" id="bzk-qx-Uzn"/>
+                    <constraint firstItem="Evz-Ex-40t" firstAttribute="top" secondItem="vEr-F1-0Tx" secondAttribute="bottom" constant="10" id="dJD-uk-uKk"/>
+                    <constraint firstItem="9x6-Bi-Yoh" firstAttribute="leading" secondItem="dHz-1I-b4u" secondAttribute="trailing" constant="4" id="gnK-nE-XHz"/>
+                    <constraint firstItem="fXu-CN-Faw" firstAttribute="height" secondItem="2EI-ao-88o" secondAttribute="height" id="mwI-h3-R24"/>
+                    <constraint firstItem="fXu-CN-Faw" firstAttribute="height" secondItem="2EI-ao-88o" secondAttribute="height" id="my8-BY-B6a"/>
+                    <constraint firstItem="zY7-ie-Es7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="oQn-s1-Wkp"/>
+                    <constraint firstItem="9x6-Bi-Yoh" firstAttribute="centerY" secondItem="dHz-1I-b4u" secondAttribute="centerY" id="oWp-2o-YwY"/>
+                    <constraint firstItem="fXu-CN-Faw" firstAttribute="top" secondItem="2EI-ao-88o" secondAttribute="bottom" constant="2.5" id="qlQ-e0-IMK"/>
+                    <constraint firstItem="0PO-gS-cpW" firstAttribute="leading" secondItem="jKg-oW-m71" secondAttribute="leading" id="qqq-nE-FE5"/>
+                    <constraint firstItem="fXu-CN-Faw" firstAttribute="leading" secondItem="2EI-ao-88o" secondAttribute="leading" id="u9i-DX-FeW"/>
+                    <constraint firstItem="vsM-R0-naR" firstAttribute="centerY" secondItem="vEr-F1-0Tx" secondAttribute="centerY" id="vHp-5m-iwP"/>
+                    <constraint firstItem="vuG-br-TBd" firstAttribute="trailing" secondItem="pYC-aj-gCi" secondAttribute="trailing" constant="-8" id="x5m-fD-1sB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLineView" destination="zY7-ie-Es7" id="Wsc-6L-qjd"/>
+                <outlet property="categoryName" destination="Evz-Ex-40t" id="49d-rR-sRJ"/>
+                <outlet property="categorySubItem" destination="pYC-aj-gCi" id="0Mc-zx-O5N"/>
+                <outlet property="cellVerticalConstraint" destination="CXF-UZ-Yxj" id="y0r-42-Ix9"/>
+                <outlet property="closingLabel" destination="9x6-Bi-Yoh" id="74A-Yi-S6v"/>
+                <outlet property="closingTimeText" destination="Xcm-7q-dcD" id="Pj7-c8-ayW"/>
+                <outlet property="downArrowButton" destination="vuG-br-TBd" id="B0e-kc-3J3"/>
+                <outlet property="logoImage" destination="jKg-oW-m71" id="j2B-aH-TER"/>
+                <outlet property="openingLabel" destination="dHz-1I-b4u" id="f1X-Q6-OFv"/>
+                <outlet property="openingTimeText" destination="vsM-R0-naR" id="Sq1-Iz-eEx"/>
+                <outlet property="sectionHeader" destination="0PO-gS-cpW" id="NcZ-Xw-2ee"/>
+                <outlet property="settingsName" destination="vEr-F1-0Tx" id="mgf-VV-JJ2"/>
+                <outlet property="toAddPickerView" destination="2EI-ao-88o" id="Vjk-IB-40R"/>
+                <outlet property="toAddSubCategoryPicker" destination="fXu-CN-Faw" id="bzu-QN-2yN"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="87"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="businessCategoryIcon" width="20" height="18"/>
+        <image name="downArrowIcon" width="10" height="4"/>
+    </resources>
+</document>
