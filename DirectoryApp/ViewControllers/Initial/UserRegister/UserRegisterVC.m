@@ -184,12 +184,7 @@
         
     }];
     NSString *profileId=[NSString stringWithFormat:@"%d.jpg",editUser.user_id];
-    //54.214.172.192:8080
-    //testing purpose
-   NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
-    
-    //mainserver
-//    NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
+    NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
     [self.profImageView sd_setImageWithURL:[NSURL URLWithString:finalProfImgUrlStg] placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] options:SDWebImageRefreshCached completed:nil];
 
     self.firstNameTextField.text = editUser.first_name;
@@ -825,13 +820,7 @@
     [networkHandler startUploadRequest:@"DirectoryProfilePhoto" withData:uploadImageData withType:fileTypeJPGImage withUrlParameter:updateUserProfPic withFileLocation:@"imageFile" SuccessBlock:^(id responseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[NSNumber numberWithInt:user.user_id]];
-        
-        //54.214.172.192:8080
-        //testing purpose
-          NSString *imageUrl = [NSString stringWithFormat:@"%@%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
-        
-        //main server
-        // NSString *imageUrl = [NSString stringWithFormat:@"%@%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
+         NSString *imageUrl = [NSString stringWithFormat:@"%@%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         [[SDImageCache sharedImageCache] removeImageForKey:imageUrl fromDisk:YES withCompletion:^{
          
         }];

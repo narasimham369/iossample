@@ -54,13 +54,7 @@
     self.businessName.text = favourites.businessName;
     self.offerCount.text = [NSString stringWithFormat:@"%d Offers",favourites.offerCount];
     NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[myFavouiteSpotDetails valueForKey:@"businessID"]];
-    
-    //54.214.172.192:8080
-    //testing purpose
-     NSString *imageUrl = [NSString stringWithFormat:@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
-    
-    //main server
-   // NSString *imageUrl = [NSString stringWithFormat:@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
+    NSString *imageUrl = [NSString stringWithFormat:@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
     [self.businessLogo sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"noImage"] options:SDWebImageRefreshCached completed:nil];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
