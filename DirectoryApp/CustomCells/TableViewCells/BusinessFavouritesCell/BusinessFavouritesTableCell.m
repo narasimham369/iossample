@@ -35,7 +35,12 @@
     if([recommendDetails isKindOfClass:[Racommendations class]]){
         Racommendations *recommend = (Racommendations *)recommendDetails;
         self.nameLabel.text = recommend.fullName;
+        NSLog(@"%@ch", self.nameLabel.text);
         userId = [NSNumber numberWithLong:recommend.user_id];
+        NSLog(@"%@ush", userId);
+        NSString* counttext = [NSString stringWithFormat:@"%i", recommend.specialCouponSentCount];
+      self.CountLbl.text = counttext;
+     //  NSLog(@"%dush", check);
         recommendTime = recommend.recemmendedTime;
         
     }

@@ -201,7 +201,12 @@
         self.availableDate.text=[NSString stringWithFormat:@"%@",availDate];
     }
     NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[self.bussinessDetails valueForKey:@"business_id"]];
-    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+    
+    //testing purpose
+    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+    
+  // Main server
+ // NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
     [self.locationImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"noImage"] options:SDWebImageRefreshCached completed:nil];
     if([[self.myOffersArray valueForKey:@"savedStatus"]isEqual:[NSNumber numberWithInt:0]]){
         self.saveIcon.image=[UIImage imageNamed:@"homeBalckTicket"];
@@ -377,7 +382,11 @@
     BOOL isLogIn = [[NSUserDefaults standardUserDefaults] boolForKey:isLoggedIn];
     if(isLogIn){
         SendToVC *sendToVC = [[SendToVC alloc] initWithNibName:@"SendToVC" bundle:nil];
-        NSString *string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+        
+      //testing prpose
+       NSString *string=[NSString stringWithFormat:@"%@%@/%@",@"http:// 54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+        //main server
+//        NSString *string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
         sendToVC.itemImageUrl =[NSURL URLWithString:string];
         sendToVC.myOffersArray=self.myOffersArray;
         sendToVC.bussinessDetails=self.bussinessDetails;
@@ -405,10 +414,21 @@
         sendToVC.myOffersArray=self.myOffersArray;
         NSString *string;
         if(self.isFromSurpriseBox){
-            string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
+            
+            //54.214.172.192:8080
+            //testing purpose
+           string=[NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
+            
+            //main server
+           // string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
         }
         else{
-            string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+            
+          //testing purpose
+            string=[NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+            
+            //main server
+//            string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
         }
         sendToVC.itemImageUrl =[NSURL URLWithString:string];
         [self.navigationController pushViewController:sendToVC animated:YES];
@@ -511,13 +531,27 @@
     cell.couponCollectionViewDelegate=self;
     if(self.isFromBusinessOwner){
         Offers *offer = (Offers *)self.offerDetails;
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
+        
+        
+        //testing pirpose
+        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
+        
+        //main server
+//        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
     }
     else if(self.isFromSurpriseBox){
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
+        
+          //testing pirpose
+        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
+        
+         //main server
+//        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
     }
     else{
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+         //testing pirpose
+        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+         //main server
+//        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
     }
     return cell;
 }

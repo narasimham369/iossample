@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageIcon;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *CountLbl;
 @property (nonatomic, strong) id recommendDetails;
 
 @end

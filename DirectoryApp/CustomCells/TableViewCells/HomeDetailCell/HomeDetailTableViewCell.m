@@ -65,7 +65,14 @@
 }
 
 -(void)setOfferListDict:(NSMutableDictionary *)offerListDict{
-    NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[offerListDict valueForKey:@"id"],[[offerListDict valueForKey:@"files"]firstObject]];
+    
+    //54.214.172.192:8080
+    
+    //testing purpose
+     NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[offerListDict valueForKey:@"id"],[[offerListDict valueForKey:@"files"]firstObject]];
+    
+    //main server
+//    NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[offerListDict valueForKey:@"id"],[[offerListDict valueForKey:@"files"]firstObject]];
     if(![[offerListDict valueForKey:@"expiry_date"] isEqual: [NSNull null]]){
         NSString *openingTime=[offerListDict valueForKey:@"expiry_date"];
         openingTime=[openingTime convertDateWithInitialFormat:@"" ToDateWithFormat:@""];
@@ -85,6 +92,20 @@
         self.saveImageView.image=[UIImage imageNamed:@"homeBalckTicket"];
     }else{
         self.saveImageView.image=[UIImage imageNamed:@"homeGreenTicket"];
+        
+//        offerListDict = [[NSMutableDictionary alloc]init];
+//        offerListDict = nil;
+//        UITableViewCell.
+        
+        
+//        [objectsAtSection removeObjectAtIndex:indexPath.row]; 
+//  self.decriptionLabel.hidden = YES;
+//        self.availableDateLabel.hidden =YES;
+//        self.nameLabel.hidden =YES;
+//        self.logoImage.hidden =YES;
+        
+        
+       
     }
 }
 
@@ -109,7 +130,11 @@
         self.availableDateLabel.text = avlDate;
     }
     
-    NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[mySavedCouponsDetails valueForKey:@"id"],[mySavedCouponsDetails valueForKey:@"firstImageFileName"]];
+    //testing purpose
+     NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[mySavedCouponsDetails valueForKey:@"id"],[mySavedCouponsDetails valueForKey:@"firstImageFileName"]];
+    
+    //main server
+//    NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[mySavedCouponsDetails valueForKey:@"id"],[mySavedCouponsDetails valueForKey:@"firstImageFileName"]];
     [self.logoImage sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"noImage"] options:SDWebImageRefreshCached completed:nil];
     if([[mySavedCouponsDetails valueForKey:@"is_special_coupon"]isEqual:[NSNumber numberWithInt:1]]){
         self.specialView.hidden=NO;

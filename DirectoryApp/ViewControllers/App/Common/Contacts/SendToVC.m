@@ -592,6 +592,7 @@ ABNewPersonViewControllerDelegate, ABUnknownPersonViewControllerDelegate>
     switch (result) {
         case MessageComposeResultCancelled:
             NSLog(@"Cancelled");
+            //implement the cancel function
             break;
         case MessageComposeResultFailed:
             

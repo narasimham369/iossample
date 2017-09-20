@@ -1722,8 +1722,8 @@
 				TargetAttributes = {
 					D0F838C01E5176170091CD60 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = KCU6T4L8VT;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = NP3B626B9J;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1732,7 +1732,7 @@
 								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -2211,7 +2211,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2233,6 +2235,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2260,7 +2263,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2275,6 +2280,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2286,11 +2292,11 @@
 			baseConfigurationReference = F0D484B389B169C7D1602BA2 /* Pods-DirectoryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DirectoryApp/DirectoryApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = KCU6T4L8VT;
+				DEVELOPMENT_TEAM = NP3B626B9J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DirectoryApp/Libraries/CLFacebookHandler/CLFacebookHandler/FacebookWrapper/FacebookSdk",
@@ -2307,7 +2313,7 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 				);
 				INFOPLIST_FILE = DirectoryApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2315,10 +2321,10 @@
 					"$(PROJECT_DIR)/DirectoryApp/Libraries/Logger",
 					"$(PROJECT_DIR)/DirectoryApp/Libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.eglue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.gluappdirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "a699d962-5416-465d-b1d0-22112e5e1d36";
+				PROVISIONING_PROFILE_SPECIFIER = GluAppDirectory;
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/$(PROJECT_NAME)/DirectoryApp-Prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2329,11 +2335,11 @@
 			baseConfigurationReference = 25E1A30ED795DE0727DC55DC /* Pods-DirectoryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DirectoryApp/DirectoryApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = KCU6T4L8VT;
+				DEVELOPMENT_TEAM = NP3B626B9J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DirectoryApp/Libraries/CLFacebookHandler/CLFacebookHandler/FacebookWrapper/FacebookSdk",
@@ -2350,7 +2356,7 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 				);
 				INFOPLIST_FILE = DirectoryApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2358,10 +2364,10 @@
 					"$(PROJECT_DIR)/DirectoryApp/Libraries/Logger",
 					"$(PROJECT_DIR)/DirectoryApp/Libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.eglue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.gluappdirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "a699d962-5416-465d-b1d0-22112e5e1d36";
+				PROVISIONING_PROFILE_SPECIFIER = GluAppDirectory;
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/$(PROJECT_NAME)/DirectoryApp-Prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
