@@ -175,10 +175,10 @@
             
         //54.214.172.192:8080
             //testing purpose
-            imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
+            //imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
             
         //main server
-       // imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
+      imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
         }
         MarkerView.ImageUrl=imageUrl;
         [test addSubview:MarkerView];
@@ -334,9 +334,9 @@
         
         //54.214.172.192:8080
         //testing purpose
-        NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+       // NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
        // main server
-       // NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+   NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
         sendToVC.itemImageUrl=[NSURL URLWithString:temp];
         sendToVC.bussinessId=[NSString stringWithFormat:@"%@",[self.bussinessDetails valueForKey:@"business_id"]];
         
@@ -556,10 +556,10 @@
    // 54.214.172.192:8080
     
     //test purpose
-    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
+  //  NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
     
     //main server
-        //NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
+      NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
         annotation.title=imageUrl;
         [self.apppleMapView addAnnotation:annotation];
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);

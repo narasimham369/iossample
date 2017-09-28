@@ -69,10 +69,10 @@
     NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[self.bussinessDetails valueForKey:@"business_id"]];
     
     //testing purpose
-    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+    //NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
     
     // Main server
-    // NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+   NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
     [self.locationImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"noImage"] options:SDWebImageRefreshCached completed:nil];
     
     if([self.dateLabel.text length]==0 ||[self.dateLabel.text isEqualToString:@"(null)"]){
@@ -143,17 +143,17 @@
         
         
         //testing pirpose
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
+       // cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
         
         //main server
-        //        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
+               cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
     }
     
     else{
         //testing pirpose
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+      //  cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
         //main server
-        //        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+           cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
     }
     return cell;
 }
