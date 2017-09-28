@@ -466,10 +466,10 @@
             //54.214.172.192:8080
            
             //testing purpose
-          //  NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
+            NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
             
             //main server
-            NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
+//            NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[data valueForKey:@"business_id"],[data valueForKey:@"business_image_cache"]];
             annotation.title=imageUrl;
             [self.apppleMapView addAnnotation:annotation];
             

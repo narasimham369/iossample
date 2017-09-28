@@ -778,10 +778,10 @@
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[NSNumber numberWithLong:busUser.business_id]];
         //testing purose
         //54.214.172.192:8080
-       //  NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+         NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
         
         //mainserver
-      NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+       // NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
         [[SDImageCache sharedImageCache] removeImageForKey:imageUrl fromDisk:YES];
         [[NSNotificationCenter defaultCenter]postNotificationName:DirectoryShowBusImage object:nil];
     } ProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {

@@ -10,10 +10,10 @@
 //static NSString *BaseUrl = @"http://bizdir.pumexinfotech.com/BizDirectoryApp/";
 
 //testing purpose
-//static NSString *BaseUrl = @"http://dev.glucommunity.com/BizDirectoryApp/";
+static NSString *BaseUrl = @"http://dev.glucommunity.com/BizDirectoryApp/";
 
 //main server
-static NSString *BaseUrl = @"http://admin.glucommunity.com/BizDirectoryApp/";
+//static NSString *BaseUrl = @"http://admin.glucommunity.com/BizDirectoryApp/";
 
 static NSString *LoginUrl = @"login";
 static NSString *UserRegisterUrl = @"userRegistration";
