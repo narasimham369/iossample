@@ -501,7 +501,7 @@
     [offerDictionary setValue:startDate forKey:@"available_date"];
     [offerDictionary setValue:expDate forKey:@"expiry_date"];
     [offerDictionary setValue:imageName forKey:@"files"];
-    [Offers saveOfferDetailsWithDataDictionary:offerDictionary];
+  [Offers saveOfferDetailsWithDataDictionary:offerDictionary];
     
 }
 

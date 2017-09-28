@@ -158,7 +158,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLb-c2-gx2">
-                                    <rect key="frame" x="149" y="335" width="76.5" height="19"/>
+                                    <rect key="frame" x="149.5" y="335" width="76.5" height="19"/>
                                     <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="16"/>
                                     <color key="textColor" red="0.23921568627450979" green="0.22352941176470587" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>

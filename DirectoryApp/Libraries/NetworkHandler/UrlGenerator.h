@@ -10,7 +10,7 @@
 //static NSString *BaseUrl = @"http://bizdir.pumexinfotech.com/BizDirectoryApp/";
 
 //testing purpose
-static NSString *BaseUrl = @"http://54.214.172.192:8080/BizDirectoryApp/";
+static NSString *BaseUrl = @"http://dev.glucommunity.com/BizDirectoryApp/";
 
 //main server
 //static NSString *BaseUrl = @"http://admin.glucommunity.com/BizDirectoryApp/";

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) id offerDetails;
 @property (nonatomic, strong) NSMutableArray *myOffersArray;
 @property (nonatomic, strong) NSMutableArray *couponImagesArray;
+- (IBAction)useNow_btn:(id)sender;
 @property (nonatomic,strong) id<CouponDelegate>couponDelegate;
 @property (strong, nonatomic) id bussinessDetails;
 @property (nonatomic) NSInteger indexPath;

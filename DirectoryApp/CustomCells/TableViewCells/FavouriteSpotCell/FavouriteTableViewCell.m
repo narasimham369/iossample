@@ -57,7 +57,7 @@
     
     //54.214.172.192:8080
     //testing purpose
-     NSString *imageUrl = [NSString stringWithFormat:@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
+     NSString *imageUrl = [NSString stringWithFormat:@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];
     
     //main server
    // NSString *imageUrl = [NSString stringWithFormat:@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/%@",profileId];

@@ -18,6 +18,7 @@
 - (BOOL)validateUrl;
 - (BOOL)validateMobile;
 - (BOOL)ValidatePhoneWithString:(NSString *)phoneNumber;
+- (BOOL)validatePhoneRegister:(NSString *)phoneNumber;
 - (int) noOfUpperCaseCharacters;
 - (int) noOfLowerCaseCharacters;
 - (int) noOfDigits;

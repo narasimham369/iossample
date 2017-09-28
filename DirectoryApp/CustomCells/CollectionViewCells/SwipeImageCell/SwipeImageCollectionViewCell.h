@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserSettingsVC.h"
 @protocol CouponCollectionViewDelegate;
 
 @interface SwipeImageCollectionViewCell : UICollectionViewCell

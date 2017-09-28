@@ -240,7 +240,7 @@ ABNewPersonViewControllerDelegate, ABUnknownPersonViewControllerDelegate>
         if (granted == YES)
         {
             //keys with fetching properties
-            NSArray *keys = @[CNContactFamilyNameKey, CNContactGivenNameKey, CNContactPhoneNumbersKey, CNContactImageDataKey,CNContactEmailAddressesKey];
+            NSArray *keys = @[CNContactFamilyNameKey, CNContactGivenNameKey, CNContactPhoneNumbersKey, CNContactImageDataKey,CNContactEmailAddressesKey,CNContactPostalAddressesKey,CNContactDatesKey,CNContactPhoneticOrganizationNameKey];
             //NSString *containerId = store.defaultContainerIdentifier;
             //NSArray * contactContainerArray =  [store containersMatchingPredicate:nil error:nil];
             CNContactFetchRequest * fetchRequest = [[CNContactFetchRequest alloc]initWithKeysToFetch:keys];

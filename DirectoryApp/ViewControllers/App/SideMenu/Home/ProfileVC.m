@@ -73,7 +73,7 @@
         
         //test purpose
         
-         NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+         NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         
         // main server
 //        NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
@@ -220,7 +220,7 @@
         
         //54.214.172.192:8080
         //testing purpose
-         NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+         NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         //main purpose
 //        NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         [self.profileImage sd_setImageWithURL:[NSURL URLWithString:finalProfImgUrlStg] placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] options:SDWebImageRefreshCached completed:nil];

@@ -10,5 +10,7 @@
 #import "BaseViewController.h"
 
 @interface LoginViewController : BaseViewController
+@property(nonatomic,strong)NSString *type;
+
 
 @end

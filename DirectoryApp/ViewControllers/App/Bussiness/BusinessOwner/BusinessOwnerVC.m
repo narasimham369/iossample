@@ -18,7 +18,7 @@
 #import "MapViewController.h"
 
 @interface BusinessOwnerVC ()<UITableViewDataSource,UITableViewDelegate,MGSwipeTableCellDelegate>
-@property (nonatomic, strong) NSArray *myOffersArray;
+@property (nonatomic, strong) NSMutableArray *myOffersArray;
 @property (weak, nonatomic) IBOutlet UIButton *offerButton;
 @property (weak, nonatomic) IBOutlet UIView *logoContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -344,7 +344,17 @@
 #pragma mark - Populating Datas
 
 -(void)populateOfferTableView{
+    
     self.myOffersArray =[Offers getOffersList];
+    
+//    [self.offerTableView beginUpdates];
+//    id object = [self.myOffersArray lastObject];
+//    [self.myOffersArray removeLastObject];
+//    [self.myOffersArray insertObject:object atIndex:0];
+//    [self.offerTableView moveRowAtIndexPath:[NSIndexPath indexPathWithIndex:self.myOffersArray.count]
+//                      toIndexPath:[NSIndexPath indexPathWithIndex:0]];
+//    [self.offerTableView endUpdates];
+    
     [self.offerTableView reloadData];
 }
 

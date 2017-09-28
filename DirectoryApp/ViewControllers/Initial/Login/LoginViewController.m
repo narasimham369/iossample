@@ -95,11 +95,31 @@
     [[Utilities standardUtilities]addGradientLayerTo:self.loginButton];
 
 }
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//{
+//    
+//    
+//}
+
+
+
+
+
+
 
 #pragma mark - View Actions
 
 - (IBAction)LoginButtonAction:(id)sender {
     if([self isvalidInput]){
+        if([self.usernameTextField.text validEmail] == YES)
+        {
+            self.type =@"1";
+        }
+        else
+        {
+            self.type =@"2";
+        }
+        
         [self LoginApi];
     }
     [self.view endEditing:YES];
@@ -152,23 +172,39 @@
     return YES;
 }
 
+
+
+
+
 #pragma mark - Validation
 
 -(BOOL)isvalidInput{
     BOOL isvalid = NO;
     if ([self.usernameTextField.text empty]){
         [self ShowAlert:@"Please enter an email address"];
-    }else if (![self.usernameTextField.text validEmail]){
-        [self ShowAlert:@"Please enter a valid email address"];
-    }else if ([self.passwordTextField.text empty]){
+    }
+    else if (!([self.usernameTextField.text validEmail] || [self.usernameTextField.text validateMobile])){
+        [self ShowAlert:@"Please enter a valid email address/phonenumber"];
+        
+    }
+   else if ([self.passwordTextField.text empty]){
         [self ShowAlert:@"Please enter your password"];
-    }else if ([self.passwordTextField.text length]<8){
+    }
+   else if ([self.passwordTextField.text length]<8){
         [self ShowAlert:@"Password is incorrect"];
-    }else {
+    }
+    
+    else {
         isvalid = YES;
     }
     return isvalid;
 }
+
+
+
+
+
+
 
 #pragma mark - FacebookWrapper session change Notification
 
@@ -240,7 +276,7 @@
 
 -(void)LoginApi {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSString *tempString = [NSString stringWithFormat:@"email=%@&password=%@",self.usernameTextField.text,self.passwordTextField.text];
+    NSString *tempString = [NSString stringWithFormat:@"email=%@&password=%@&type=%@",self.usernameTextField.text,self.passwordTextField.text,self.type];
     NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:EGLUEURLTYPELOGIN withURLParameter:nil];
     NetworkHandler *networkHandler = [[NetworkHandler alloc]initWithRequestUrl:url withBody:tempString withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode){

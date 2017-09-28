@@ -36,6 +36,7 @@
 #import "User.h"
 #import "JTSImageInfo.h"
 #import "JTSImageViewController.h"
+#import "UseNoewDetailsVC.h"
 
 @interface CouponDetailViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,CouponCollectionViewDelegate,UIDocumentInteractionControllerDelegate,UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *cardView;
@@ -203,7 +204,7 @@
     NSString *profileId=[NSString stringWithFormat:@"%@.jpg",[self.bussinessDetails valueForKey:@"business_id"]];
     
     //testing purpose
-    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
     
   // Main server
  // NSString *imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
@@ -384,7 +385,7 @@
         SendToVC *sendToVC = [[SendToVC alloc] initWithNibName:@"SendToVC" bundle:nil];
         
       //testing prpose
-       NSString *string=[NSString stringWithFormat:@"%@%@/%@",@"http:// 54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+       NSString *string=[NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
         //main server
 //        NSString *string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
         sendToVC.itemImageUrl =[NSURL URLWithString:string];
@@ -417,7 +418,7 @@
             
             //54.214.172.192:8080
             //testing purpose
-           string=[NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
+           string=[NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
             
             //main server
            // string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
@@ -425,7 +426,7 @@
         else{
             
           //testing purpose
-            string=[NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+            string=[NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
             
             //main server
 //            string=[NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
@@ -534,7 +535,7 @@
         
         
         //testing pirpose
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
+        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
         
         //main server
 //        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[NSNumber numberWithLong:offer.offerID],[self.couponImagesArray objectAtIndex:0]];
@@ -542,14 +543,14 @@
     else if(self.isFromSurpriseBox){
         
           //testing pirpose
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
+        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
         
          //main server
 //        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"couponid"],[self.couponImagesArray objectAtIndex:0]];
     }
     else{
          //testing pirpose
-        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
+        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
          //main server
 //        cell.imageName= [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[self.myOffersArray valueForKey:@"id"],[self.couponImagesArray objectAtIndex:0]];
     }
@@ -687,4 +688,13 @@
 }
 
 
+- (IBAction)useNow_btn:(id)sender {
+    
+    UseNoewDetailsVC *vc = [[UseNoewDetailsVC alloc] initWithNibName:@"UseNoewDetailsVC" bundle:nil];
+    vc.myOffersArray=_myOffersArray;
+    vc.bussinessDetails=self.bussinessDetails;
+    vc.couponImagesArray=_couponImagesArray;
+    //vc.couponDelegate=self;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

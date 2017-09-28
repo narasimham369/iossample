@@ -50,7 +50,7 @@
     NSString *bussId=[NSString stringWithFormat:@"%@.jpg",[surpriseBoxDetails valueForKey:@"business_id"]];
     
     //testing purpose
-    imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",bussId];
+    imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",bussId];
     
     //main server
   //  imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",bussId];
@@ -59,7 +59,7 @@
     if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:1]]) {
         descriptionText = [[NSAttributedString alloc] initWithString:@" has sent a special coupon for you." attributes:descriptionAttributes];
        //testing purpose
-        imageUrl = [NSString stringWithFormat:@"%@%d/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",surprise.couponid,surprise.imageName];
+        imageUrl = [NSString stringWithFormat:@"%@%d/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",surprise.couponid,surprise.imageName];
         
         //main server
         //imageUrl = [NSString stringWithFormat:@"%@%d/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",surprise.couponid,surprise.imageName];
@@ -70,7 +70,7 @@
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg?%@",[surpriseBoxDetails valueForKey:@"shared_user_id"],[surpriseBoxDetails valueForKey:@"shared_user_image_cache"]];
         
        //test purpose
-        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         
         //main server
 //        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
@@ -82,7 +82,7 @@
         NSString *profileId=[NSString stringWithFormat:@"%@.jpg?%@",[surpriseBoxDetails valueForKey:@"user_id"],[surpriseBoxDetails valueForKey:@"user_image_cache"]];
         
         //testing purpose
-        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+        imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         //main server
        // imageUrl = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
     }else if ([[surpriseBoxDetails valueForKey:@"notificationType"] isEqual:[NSNumber numberWithInt:4]]) {

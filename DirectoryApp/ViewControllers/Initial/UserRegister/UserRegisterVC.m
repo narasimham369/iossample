@@ -186,7 +186,7 @@
     NSString *profileId=[NSString stringWithFormat:@"%d.jpg",editUser.user_id];
     //54.214.172.192:8080
     //testing purpose
-   NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+   NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
     
     //mainserver
 //    NSString *finalProfImgUrlStg = [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
@@ -828,7 +828,7 @@
         
         //54.214.172.192:8080
         //testing purpose
-          NSString *imageUrl = [NSString stringWithFormat:@"%@%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/ProfileImages/",profileId];
+          NSString *imageUrl = [NSString stringWithFormat:@"%@%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];
         
         //main server
         // NSString *imageUrl = [NSString stringWithFormat:@"%@%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/ProfileImages/",profileId];

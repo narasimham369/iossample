@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		112C5560036A3B3A0FDBC432 /* libPods-DirectoryApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4995D63D1EE3D5258317BC3 /* libPods-DirectoryApp.a */; };
+		4557B3A81F73B65100A99992 /* UseNoewDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4557B3A61F73B65100A99992 /* UseNoewDetailsVC.m */; };
+		4557B3A91F73B65100A99992 /* UseNoewDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4557B3A71F73B65100A99992 /* UseNoewDetailsVC.xib */; };
 		8000D12A1E7A650100875C3C /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8000D11F1E7A650100875C3C /* JTSAnimatedGIFUtility.m */; };
 		8000D12B1E7A650100875C3C /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8000D1211E7A650100875C3C /* JTSImageInfo.m */; };
 		8000D12C1E7A650100875C3C /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8000D1231E7A650100875C3C /* JTSImageViewController.m */; };
@@ -216,6 +218,9 @@
 		25E1A30ED795DE0727DC55DC /* Pods-DirectoryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DirectoryApp/Pods-DirectoryApp.release.xcconfig"; sourceTree = "<group>"; };
 		28570107119C8BD2160F3615 /* Pods-DirectoryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DirectoryAppUITests/Pods-DirectoryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3428541B8C2E3C0905189C4C /* Pods-DirectoryAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DirectoryAppTests/Pods-DirectoryAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		4557B3A51F73B65100A99992 /* UseNoewDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseNoewDetailsVC.h; sourceTree = "<group>"; };
+		4557B3A61F73B65100A99992 /* UseNoewDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseNoewDetailsVC.m; sourceTree = "<group>"; };
+		4557B3A71F73B65100A99992 /* UseNoewDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseNoewDetailsVC.xib; sourceTree = "<group>"; };
 		46D766ED492C425061DA92E2 /* Pods-DirectoryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DirectoryAppTests/Pods-DirectoryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		479978015317CD92B74F2778 /* libPods-DirectoryAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DirectoryAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8000D11E1E7A650100875C3C /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
@@ -533,6 +538,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4557B3961F73B08900A99992 /* UseNowDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				4557B3A51F73B65100A99992 /* UseNoewDetailsVC.h */,
+				4557B3A61F73B65100A99992 /* UseNoewDetailsVC.m */,
+				4557B3A71F73B65100A99992 /* UseNoewDetailsVC.xib */,
+			);
+			path = UseNowDetailsVC;
+			sourceTree = "<group>";
+		};
 		8000D11D1E7A650100875C3C /* ImageViewLibary */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +630,7 @@
 		8027548C1E7B9B7400EEFD78 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				4557B3961F73B08900A99992 /* UseNowDetailsVC */,
 				802754911E7B9B7400EEFD78 /* Map */,
 				8027549B1E7B9B7400EEFD78 /* ProductDetail */,
 				8027548D1E7B9B7400EEFD78 /* CouponDetail */,
@@ -1723,7 +1739,7 @@
 					D0F838C01E5176170091CD60 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NP3B626B9J;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1809,6 +1825,7 @@
 			files = (
 				80D134B01E8B8EAF008ABB88 /* Dosis-ExtraBold.otf in Resources */,
 				8027550A1E7B9C1A00EEFD78 /* SwipeImageCollectionViewCell.xib in Resources */,
+				4557B3A91F73B65100A99992 /* UseNoewDetailsVC.xib in Resources */,
 				80D134AF1E8B8EAF008ABB88 /* Dosis-Bold.otf in Resources */,
 				BC268A831E52F6EC003FD39C /* WalkThroughView.xib in Resources */,
 				802755161E7B9C1A00EEFD78 /* NewOfferTableCell.xib in Resources */,
@@ -2062,6 +2079,7 @@
 				8000D12B1E7A650100875C3C /* JTSImageInfo.m in Sources */,
 				802755311E7B9D2C00EEFD78 /* SendToVC.m in Sources */,
 				D0F839431E517FD50091CD60 /* JVFloatLabeledTextField.m in Sources */,
+				4557B3A81F73B65100A99992 /* UseNoewDetailsVC.m in Sources */,
 				802755261E7B9C4C00EEFD78 /* Model.xcdatamodeld in Sources */,
 				D0909B0D1E568A38002D8A9C /* NSString+NSstring_Category.m in Sources */,
 				D0F839471E517FD50091CD60 /* Reachability.m in Sources */,
@@ -2293,10 +2311,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = NP3B626B9J;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DirectoryApp/Libraries/CLFacebookHandler/CLFacebookHandler/FacebookWrapper/FacebookSdk",
@@ -2323,8 +2341,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.gluappdirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a699d962-5416-465d-b1d0-22112e5e1d36";
-				PROVISIONING_PROFILE_SPECIFIER = GluAppDirectory;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/$(PROJECT_NAME)/DirectoryApp-Prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2336,10 +2354,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Glu Inc. (NP3B626B9J)";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = NP3B626B9J;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DirectoryApp/Libraries/CLFacebookHandler/CLFacebookHandler/FacebookWrapper/FacebookSdk",
@@ -2366,8 +2384,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.gluappdirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a699d962-5416-465d-b1d0-22112e5e1d36";
-				PROVISIONING_PROFILE_SPECIFIER = GluAppDirectory;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/$(PROJECT_NAME)/DirectoryApp-Prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

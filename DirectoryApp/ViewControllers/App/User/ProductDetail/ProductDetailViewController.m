@@ -175,7 +175,7 @@
             
         //54.214.172.192:8080
             //testing purpose
-            imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
+            imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
             
         //main server
        // imageUrl = [NSString stringWithFormat:@"%@""%@.jpg",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",anotation.title];
@@ -334,7 +334,7 @@
         
         //54.214.172.192:8080
         //testing purpose
-        NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",profileId];
+        NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
        // main server
        // NSString *temp= [NSString stringWithFormat:@"%@""%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",profileId];
         sendToVC.itemImageUrl=[NSURL URLWithString:temp];
@@ -407,25 +407,19 @@
     NSDictionary *dict =[self.myOffersArray objectAtIndex:indexPath.section];
     NSString *savedStatutus = [dict valueForKey:@"savedStatus"];
     NSString* expiry_date =[dict valueForKey:@"expiry_date"];
-    NSString *DescriptionEvery = [dict valueForKey:@"description"];
-    NSRange rangeValue = [DescriptionEvery rangeOfString:@"Every" options:NSCaseInsensitiveSearch];
-    
+       NSString* coupon_type =[dict valueForKey:@"coupon_type"];
     
     
    if([savedStatutus isEqual:[NSNumber numberWithInt:1]])
    {
-        if([expiry_date isEqual:(NSString *)[NSNull null]])
+        if([expiry_date isEqual:(NSString *)[NSNull null]] || [coupon_type isEqual:[NSNumber numberWithInt:2]])
         {
             
     cell.offerListDict=[self.myOffersArray objectAtIndex:indexPath.section];
             _isAdjustCellhight =NO;
             
         }
-        else if (rangeValue.length > 0)
-        { NSLog(@"string contains every");
-            cell.offerListDict=[self.myOffersArray objectAtIndex:indexPath.section];
-             _isAdjustCellhight =NO;
-        }
+       
        else
        {
             cell.hidden = YES;
@@ -468,7 +462,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 17;
+    return 10;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -562,7 +556,7 @@
    // 54.214.172.192:8080
     
     //test purpose
-    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
+    NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];
     
     //main server
         //NSString *imageUrl = [NSString stringWithFormat:@"%@""%@.jpg?%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/BusinessLogos/",[self.bussinessDetails valueForKey:@"business_id"],[self.bussinessDetails valueForKey:@"business_image_cache"]];

@@ -69,7 +69,7 @@
     //54.214.172.192:8080
     
     //testing purpose
-     NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[offerListDict valueForKey:@"id"],[[offerListDict valueForKey:@"files"]firstObject]];
+     NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[offerListDict valueForKey:@"id"],[[offerListDict valueForKey:@"files"]firstObject]];
     
     //main server
 //    NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[offerListDict valueForKey:@"id"],[[offerListDict valueForKey:@"files"]firstObject]];
@@ -131,7 +131,7 @@
     }
     
     //testing purpose
-     NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://54.214.172.192:8080/BizDirectoryApp/uploads/OfferImages/",[mySavedCouponsDetails valueForKey:@"id"],[mySavedCouponsDetails valueForKey:@"firstImageFileName"]];
+     NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://dev.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[mySavedCouponsDetails valueForKey:@"id"],[mySavedCouponsDetails valueForKey:@"firstImageFileName"]];
     
     //main server
 //    NSString *imageUrl = [NSString stringWithFormat:@"%@%@/%@",@"http://admin.glucommunity.com/BizDirectoryApp/uploads/OfferImages/",[mySavedCouponsDetails valueForKey:@"id"],[mySavedCouponsDetails valueForKey:@"firstImageFileName"]];
