@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SwipeImageCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="127"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="291" height="127"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bnt-dF-IEV">
+                        <rect key="frame" x="-8" y="-8" width="307" height="143"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bah-VM-17J">
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="127"/>
+                        <connections>
+                            <action selector="ImageTapAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="32L-A9-vqb"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Bnt-dF-IEV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-8" id="5hf-Ov-VLw"/>
+                <constraint firstItem="bah-VM-17J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KdG-76-uR4"/>
+                <constraint firstItem="Bnt-dF-IEV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-8" id="M87-x5-b1g"/>
+                <constraint firstItem="bah-VM-17J" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bwg-vz-mNh"/>
+                <constraint firstAttribute="trailing" secondItem="Bnt-dF-IEV" secondAttribute="trailing" constant="-8" id="ciK-cs-l1d"/>
+                <constraint firstAttribute="trailing" secondItem="bah-VM-17J" secondAttribute="trailing" id="ijL-tG-l7Y"/>
+                <constraint firstAttribute="bottom" secondItem="Bnt-dF-IEV" secondAttribute="bottom" constant="-8" id="jzc-tw-2eL"/>
+                <constraint firstAttribute="bottom" secondItem="bah-VM-17J" secondAttribute="bottom" id="oww-oe-RZY"/>
+            </constraints>
+            <size key="customSize" width="291" height="127"/>
+            <connections>
+                <outlet property="imageView" destination="Bnt-dF-IEV" id="MHs-tO-zV8"/>
+            </connections>
+            <point key="canvasLocation" x="41.5" y="-3.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="4" width="211" height="168"/>
+    </resources>
+</document>

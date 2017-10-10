@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavouriteSpotsVC">
+            <connections>
+                <outlet property="favouriteSpotTableView" destination="dsW-0m-108" id="XG3-7h-I9T"/>
+                <outlet property="gradientView" destination="YoW-Lr-qyC" id="hoS-zE-9p9"/>
+                <outlet property="noSpotslabel" destination="wNs-st-MCt" id="SSy-dZ-67b"/>
+                <outlet property="spotSearchBar" destination="EcU-Xt-VJR" id="RWa-8G-ty9"/>
+                <outlet property="spotSearchView" destination="LZk-EU-8WB" id="ngR-kr-Rvr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favourite Spots to show..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNs-st-MCt">
+                    <rect key="frame" x="97" y="323.5" width="180.5" height="21.5"/>
+                    <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
+                    <color key="textColor" red="0.23921568627450979" green="0.22352941176470587" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZk-EU-8WB">
+                    <rect key="frame" x="10" y="10" width="355" height="44"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="EcU-Xt-VJR">
+                            <rect key="frame" x="1" y="1" width="353" height="42"/>
+                            <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="yuR-4B-HiG"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Qzs-Gx-ueY"/>
+                        <constraint firstAttribute="trailing" secondItem="EcU-Xt-VJR" secondAttribute="trailing" constant="1" id="THd-jd-Fjl"/>
+                        <constraint firstAttribute="bottom" secondItem="EcU-Xt-VJR" secondAttribute="bottom" constant="1" id="c3r-Ad-ETl"/>
+                        <constraint firstItem="EcU-Xt-VJR" firstAttribute="top" secondItem="LZk-EU-8WB" secondAttribute="top" constant="1" id="hLF-x9-YUo"/>
+                        <constraint firstItem="EcU-Xt-VJR" firstAttribute="leading" secondItem="LZk-EU-8WB" secondAttribute="leading" constant="1" id="kui-kY-FUy"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trj-Qq-rXI">
+                    <rect key="frame" x="8" y="64" width="359" height="603"/>
+                    <subviews>
+                        <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsW-0m-108">
+                            <rect key="frame" x="2" y="0.0" width="355" height="603"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="separatorColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="U4x-a8-Gd3"/>
+                                <outlet property="delegate" destination="-1" id="4M7-YI-F4t"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dsW-0m-108" secondAttribute="bottom" id="KCD-H8-Hdr"/>
+                        <constraint firstItem="dsW-0m-108" firstAttribute="leading" secondItem="Trj-Qq-rXI" secondAttribute="leading" constant="2" id="Shh-cX-nAJ"/>
+                        <constraint firstItem="dsW-0m-108" firstAttribute="top" secondItem="Trj-Qq-rXI" secondAttribute="top" id="dkA-3u-bIr"/>
+                        <constraint firstAttribute="trailing" secondItem="dsW-0m-108" secondAttribute="trailing" constant="2" id="vrU-Xg-LPY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YoW-Lr-qyC">
+                    <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29452054789999998" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ufP-tQ-ivA" appends="YES" id="BcG-ZF-ETZ"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LZk-EU-8WB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="0Wr-FK-WPJ"/>
+                <constraint firstItem="YoW-Lr-qyC" firstAttribute="top" secondItem="LZk-EU-8WB" secondAttribute="bottom" id="46y-C0-S8y"/>
+                <constraint firstItem="Trj-Qq-rXI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="8gM-xJ-SOt"/>
+                <constraint firstAttribute="trailing" secondItem="LZk-EU-8WB" secondAttribute="trailing" constant="10" id="B4e-8L-y8o"/>
+                <constraint firstItem="wNs-st-MCt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jm8-Si-r9n"/>
+                <constraint firstAttribute="bottom" secondItem="YoW-Lr-qyC" secondAttribute="bottom" id="NUa-Fe-Q6c"/>
+                <constraint firstAttribute="bottom" secondItem="Trj-Qq-rXI" secondAttribute="bottom" id="Vzo-78-uSj"/>
+                <constraint firstItem="wNs-st-MCt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XV2-L4-bx0"/>
+                <constraint firstAttribute="trailing" secondItem="Trj-Qq-rXI" secondAttribute="trailing" constant="8" id="ZKr-cX-onb"/>
+                <constraint firstAttribute="trailing" secondItem="YoW-Lr-qyC" secondAttribute="trailing" id="nvj-8z-elT"/>
+                <constraint firstItem="Trj-Qq-rXI" firstAttribute="top" secondItem="LZk-EU-8WB" secondAttribute="bottom" constant="10" id="pKc-H8-jOs"/>
+                <constraint firstItem="YoW-Lr-qyC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tnp-8f-eKw"/>
+                <constraint firstItem="LZk-EU-8WB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="zPk-X6-1Gh"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+        <tapGestureRecognizer id="ufP-tQ-ivA">
+            <connections>
+                <action selector="tapAction:" destination="-1" id="BAi-8b-gXV"/>
+                <outlet property="delegate" destination="-1" id="D0L-0u-jNW"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

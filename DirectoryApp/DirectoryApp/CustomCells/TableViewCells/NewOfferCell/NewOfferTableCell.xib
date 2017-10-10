@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.otf">
+            <string>Dosis-Bold</string>
+        </array>
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+        <array key="Dosis-SemiBold.otf">
+            <string>Dosis-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="NewOfferTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="442" height="152.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-rE-RHK">
+                        <rect key="frame" x="0.0" y="0.0" width="108" height="152"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="108" id="WUd-yy-x2b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xczvdfzb" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EME-9p-yP0">
+                        <rect key="frame" x="118" y="18" width="58.5" height="20.5"/>
+                        <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="16"/>
+                        <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exp : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86R-vo-Nar" userLabel="Exp :">
+                        <rect key="frame" x="152.5" y="131.5" width="25.5" height="15.5"/>
+                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="12"/>
+                        <color key="textColor" red="1" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-bh-4oZ">
+                        <rect key="frame" x="0.0" y="0.0" width="108" height="152"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10377111771657339" colorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fw-TN-qy2">
+                        <rect key="frame" x="178" y="140" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="11"/>
+                        <color key="textColor" red="1" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsgds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N87-dG-Yvt">
+                        <rect key="frame" x="118" y="43.5" width="31" height="18"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="14"/>
+                        <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vy8-4N-L2U">
+                        <rect key="frame" x="118" y="131.5" width="26" height="15.5"/>
+                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="12"/>
+                        <color key="textColor" red="0.99215686270000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-nY-pl9">
+                        <rect key="frame" x="147.5" y="139.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="11"/>
+                        <color key="textColor" red="0.99215686270000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="EME-9p-yP0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="3wu-0n-abo"/>
+                    <constraint firstItem="86R-vo-Nar" firstAttribute="leading" secondItem="vcd-nY-pl9" secondAttribute="trailing" constant="5" id="AdO-fb-XUu"/>
+                    <constraint firstItem="vcd-nY-pl9" firstAttribute="leading" secondItem="Vy8-4N-L2U" secondAttribute="trailing" constant="3" id="Gys-4v-GVp"/>
+                    <constraint firstItem="cx5-rE-RHK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="HLl-Cj-8eJ"/>
+                    <constraint firstItem="Vy8-4N-L2U" firstAttribute="centerY" secondItem="5fw-TN-qy2" secondAttribute="centerY" id="IOf-oy-6ex"/>
+                    <constraint firstItem="86R-vo-Nar" firstAttribute="bottom" secondItem="cx5-rE-RHK" secondAttribute="bottom" constant="-5" id="MQv-wg-lYh"/>
+                    <constraint firstItem="KQo-bh-4oZ" firstAttribute="trailing" secondItem="cx5-rE-RHK" secondAttribute="trailing" id="Muu-RO-nLh"/>
+                    <constraint firstItem="KQo-bh-4oZ" firstAttribute="leading" secondItem="cx5-rE-RHK" secondAttribute="leading" id="SCR-ii-Kgn"/>
+                    <constraint firstItem="vcd-nY-pl9" firstAttribute="centerY" secondItem="Vy8-4N-L2U" secondAttribute="centerY" id="U0P-HX-ovk"/>
+                    <constraint firstItem="KQo-bh-4oZ" firstAttribute="bottom" secondItem="cx5-rE-RHK" secondAttribute="bottom" id="Wdu-2U-dUi"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EME-9p-yP0" secondAttribute="trailing" constant="3" id="XpW-ny-igQ"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="N87-dG-Yvt" secondAttribute="trailing" constant="3" id="a9D-c5-mi0"/>
+                    <constraint firstItem="5fw-TN-qy2" firstAttribute="leading" secondItem="86R-vo-Nar" secondAttribute="trailing" id="f4w-3X-sDC"/>
+                    <constraint firstItem="EME-9p-yP0" firstAttribute="leading" secondItem="cx5-rE-RHK" secondAttribute="trailing" constant="10" id="gId-6C-xAd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cx5-rE-RHK" secondAttribute="bottom" constant="-8" id="pvz-J1-ejB"/>
+                    <constraint firstItem="N87-dG-Yvt" firstAttribute="top" secondItem="EME-9p-yP0" secondAttribute="bottom" constant="5" id="q1k-zE-uZk"/>
+                    <constraint firstItem="N87-dG-Yvt" firstAttribute="leading" secondItem="EME-9p-yP0" secondAttribute="leading" id="r3h-Yx-hv0"/>
+                    <constraint firstItem="Vy8-4N-L2U" firstAttribute="leading" secondItem="N87-dG-Yvt" secondAttribute="leading" id="sIn-Pi-4i8"/>
+                    <constraint firstItem="Vy8-4N-L2U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="N87-dG-Yvt" secondAttribute="bottom" constant="3" id="u8b-L1-dUM"/>
+                    <constraint firstItem="KQo-bh-4oZ" firstAttribute="top" secondItem="cx5-rE-RHK" secondAttribute="top" id="vLU-ls-SWq"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="cx5-rE-RHK" secondAttribute="leading" constant="8" id="wdD-bD-Z3I"/>
+                    <constraint firstItem="5fw-TN-qy2" firstAttribute="centerY" secondItem="86R-vo-Nar" secondAttribute="centerY" id="xbq-qo-S1L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="availableDate" destination="vcd-nY-pl9" id="XEL-Vr-Kc7"/>
+                <outlet property="contentBaseView" destination="H2p-sc-9uM" id="dnl-nZ-1Nu"/>
+                <outlet property="descriptionLabel" destination="N87-dG-Yvt" id="NgF-V9-KsM"/>
+                <outlet property="expDateLabel" destination="5fw-TN-qy2" id="K14-QC-rbX"/>
+                <outlet property="nameLabel" destination="EME-9p-yP0" id="JBp-3E-RTR"/>
+                <outlet property="offerImageView" destination="cx5-rE-RHK" id="PEN-aL-rw6"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="37.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="3" width="211" height="168"/>
+    </resources>
+</document>

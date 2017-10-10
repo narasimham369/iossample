@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="MapCategoryTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="498" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="498" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S5-Eg-0Xh">
+                        <rect key="frame" x="45" y="70" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOX-aF-M5n">
+                        <rect key="frame" x="20" y="138" width="466" height="1"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.74117647060000003" blue="0.74901960779999999" alpha="0.5977097603" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="XfP-bs-JQW"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhL-CJ-mAq">
+                        <rect key="frame" x="13" y="8" width="27" height="124"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="27" id="Qhj-vM-q5F"/>
+                        </constraints>
+                        <state key="normal" image="checkBoxBlank"/>
+                        <state key="selected" image="checkBoxSelected"/>
+                        <connections>
+                            <action selector="selectionButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Db-KF-CQM"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="YhL-CJ-mAq" secondAttribute="bottom" id="62q-uO-MUG"/>
+                    <constraint firstItem="nOX-aF-M5n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="6Cp-y5-aG6"/>
+                    <constraint firstItem="YhL-CJ-mAq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="YGz-4X-TSp"/>
+                    <constraint firstItem="YhL-CJ-mAq" firstAttribute="centerY" secondItem="1S5-Eg-0Xh" secondAttribute="centerY" id="Zy1-8G-Lyd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="nOX-aF-M5n" secondAttribute="bottom" constant="-8" id="aHV-xd-S63"/>
+                    <constraint firstItem="YhL-CJ-mAq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="s8l-WH-0cW"/>
+                    <constraint firstItem="1S5-Eg-0Xh" firstAttribute="leading" secondItem="YhL-CJ-mAq" secondAttribute="trailing" constant="5" id="t9W-0d-IHF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nOX-aF-M5n" secondAttribute="trailing" constant="12" id="wp6-hC-4Sh"/>
+            </constraints>
+            <connections>
+                <outlet property="categoryName" destination="1S5-Eg-0Xh" id="y5f-kb-upc"/>
+                <outlet property="selectionButton" destination="YhL-CJ-mAq" id="yhV-rI-NAL"/>
+            </connections>
+            <point key="canvasLocation" x="20" y="4"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkBoxBlank" width="26" height="26"/>
+        <image name="checkBoxSelected" width="26" height="26"/>
+    </resources>
+</document>

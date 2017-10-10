@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.otf">
+            <string>Dosis-Bold</string>
+        </array>
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+        <array key="Dosis-SemiBold.otf">
+            <string>Dosis-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="FavouriteTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="114.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WxB-oN-wd9">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="114.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89O-aO-F45">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="114.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="f85-gk-xqA">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="89.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5bS-OV-wmP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 State rd Upper Darby" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2m-MG-MAd">
+                                <rect key="frame" x="110" y="38.5" width="138" height="14"/>
+                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="12"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCo-6i-xhE">
+                                <rect key="frame" x="110" y="94" width="50" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="14"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-kg-u6a">
+                                <rect key="frame" x="0.0" y="89.5" width="100" height="25"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.086274509803921567" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="yLB-Dv-5ga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eo4-Dz-Qf2">
+                                <rect key="frame" x="100" y="0.0" width="1" height="114.5"/>
+                                <color key="backgroundColor" red="0.83921568629999999" green="0.86666666670000003" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="JuZ-69-hqp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsgsdgds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdX-me-ynP">
+                                <rect key="frame" x="110" y="16" width="66.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="15"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ib7-kg-u6a" firstAttribute="leading" secondItem="f85-gk-xqA" secondAttribute="leading" id="08H-fg-V1z"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x2m-MG-MAd" secondAttribute="trailing" constant="3" id="3QQ-Gj-3uK"/>
+                            <constraint firstItem="iCo-6i-xhE" firstAttribute="leading" secondItem="x2m-MG-MAd" secondAttribute="leading" id="95u-rT-8F0"/>
+                            <constraint firstItem="f85-gk-xqA" firstAttribute="leading" secondItem="89O-aO-F45" secondAttribute="leading" id="Gk5-nk-5Lh"/>
+                            <constraint firstItem="x2m-MG-MAd" firstAttribute="top" secondItem="ZdX-me-ynP" secondAttribute="bottom" constant="5" id="KTB-0D-gJJ"/>
+                            <constraint firstItem="f85-gk-xqA" firstAttribute="top" secondItem="89O-aO-F45" secondAttribute="top" id="Kei-RG-Auy"/>
+                            <constraint firstItem="ZdX-me-ynP" firstAttribute="leading" secondItem="x2m-MG-MAd" secondAttribute="leading" id="KxX-vU-0fQ"/>
+                            <constraint firstItem="x2m-MG-MAd" firstAttribute="leading" secondItem="f85-gk-xqA" secondAttribute="trailing" constant="10" id="Qib-oG-G6c"/>
+                            <constraint firstItem="ib7-kg-u6a" firstAttribute="top" secondItem="f85-gk-xqA" secondAttribute="bottom" id="VQb-h5-GyB"/>
+                            <constraint firstAttribute="bottom" secondItem="ib7-kg-u6a" secondAttribute="bottom" id="Wcw-Qo-rLt"/>
+                            <constraint firstItem="eo4-Dz-Qf2" firstAttribute="bottom" secondItem="ib7-kg-u6a" secondAttribute="bottom" id="afW-gY-g1g"/>
+                            <constraint firstItem="eo4-Dz-Qf2" firstAttribute="leading" secondItem="f85-gk-xqA" secondAttribute="trailing" id="fFg-si-wmj"/>
+                            <constraint firstItem="iCo-6i-xhE" firstAttribute="centerY" secondItem="ib7-kg-u6a" secondAttribute="centerY" id="hq2-KR-hfV"/>
+                            <constraint firstItem="eo4-Dz-Qf2" firstAttribute="top" secondItem="f85-gk-xqA" secondAttribute="top" id="l4q-ml-BRM"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZdX-me-ynP" secondAttribute="trailing" constant="3" id="rQP-g8-P2U"/>
+                            <constraint firstItem="ib7-kg-u6a" firstAttribute="trailing" secondItem="f85-gk-xqA" secondAttribute="trailing" id="xOG-KX-LFM"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcU-0F-SzE">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="114.5"/>
+                        <connections>
+                            <action selector="imageTapAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KSl-EV-Cea"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="89O-aO-F45" secondAttribute="trailing" constant="-8" id="2ad-gX-Vce"/>
+                    <constraint firstItem="WxB-oN-wd9" firstAttribute="centerX" secondItem="89O-aO-F45" secondAttribute="centerX" id="79G-p8-buQ"/>
+                    <constraint firstItem="EcU-0F-SzE" firstAttribute="leading" secondItem="f85-gk-xqA" secondAttribute="leading" id="AIZ-qv-hR6"/>
+                    <constraint firstItem="89O-aO-F45" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Du7-ds-zcb"/>
+                    <constraint firstItem="WxB-oN-wd9" firstAttribute="width" secondItem="89O-aO-F45" secondAttribute="width" id="Ouq-Uc-RQf"/>
+                    <constraint firstItem="EcU-0F-SzE" firstAttribute="bottom" secondItem="ib7-kg-u6a" secondAttribute="bottom" id="Z4x-Yg-lxo"/>
+                    <constraint firstItem="ZdX-me-ynP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="dlZ-Zh-QZR"/>
+                    <constraint firstItem="EcU-0F-SzE" firstAttribute="top" secondItem="f85-gk-xqA" secondAttribute="top" id="iea-bh-zyJ"/>
+                    <constraint firstItem="WxB-oN-wd9" firstAttribute="height" secondItem="89O-aO-F45" secondAttribute="height" id="kUs-fX-lZf"/>
+                    <constraint firstItem="EcU-0F-SzE" firstAttribute="trailing" secondItem="f85-gk-xqA" secondAttribute="trailing" id="qeJ-5o-uqs"/>
+                    <constraint firstItem="WxB-oN-wd9" firstAttribute="centerY" secondItem="89O-aO-F45" secondAttribute="centerY" id="ten-wW-Ifc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="89O-aO-F45" secondAttribute="bottom" constant="-8" id="tgc-Nk-Iul"/>
+                    <constraint firstItem="89O-aO-F45" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="zj7-CM-gd4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="businessAddress" destination="x2m-MG-MAd" id="UCU-XK-28N"/>
+                <outlet property="businessLogo" destination="f85-gk-xqA" id="P1S-cd-z6u"/>
+                <outlet property="businessName" destination="ZdX-me-ynP" id="FHq-jM-kxp"/>
+                <outlet property="contentViews" destination="H2p-sc-9uM" id="zCX-Kv-R3g"/>
+                <outlet property="innerView" destination="89O-aO-F45" id="0ny-MY-kiC"/>
+                <outlet property="offerCount" destination="iCo-6i-xhE" id="WxB-UF-gsE"/>
+                <outlet property="shadowView" destination="WxB-oN-wd9" id="3Ce-1E-4hX"/>
+                <outlet property="shopStatus" destination="ib7-kg-u6a" id="bh0-K3-iyr"/>
+            </connections>
+            <point key="canvasLocation" x="43.5" y="17.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="demoLogo" width="50" height="50"/>
+    </resources>
+</document>

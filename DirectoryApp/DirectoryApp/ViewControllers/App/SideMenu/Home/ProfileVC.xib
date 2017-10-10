@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.otf">
+            <string>Dosis-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC">
+            <connections>
+                <outlet property="nameLabel" destination="tP3-9d-lSR" id="DqS-3B-ALf"/>
+                <outlet property="placeLabel" destination="L8B-VO-eyZ" id="u84-TT-n1f"/>
+                <outlet property="profileImage" destination="eGf-sp-bCN" id="Ub5-Pg-16L"/>
+                <outlet property="profileTableView" destination="Asf-Ba-bCN" id="fLm-5d-Cpp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwB-uc-Axz">
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="265"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3KE-9m-biV">
+                            <rect key="frame" x="23" y="33" width="19" height="19"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR4-eC-gh8">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="8Zy-eM-bKV"/>
+                                <constraint firstAttribute="height" constant="60" id="jm2-Rw-PNt"/>
+                            </constraints>
+                            <connections>
+                                <action selector="SettingsButtonAction:" destination="-1" eventType="touchUpInside" id="bfI-gI-Ejv"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="eGf-sp-bCN">
+                            <rect key="frame" x="113" y="65" width="90" height="90"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="nss-hu-tax"/>
+                                <constraint firstAttribute="width" constant="90" id="wnn-Ih-D90"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="6Kn-zZ-uks" appends="YES" id="FyU-Gg-Oyv"/>
+                            </connections>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP3-9d-lSR">
+                            <rect key="frame" x="5" y="170" width="305" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="17"/>
+                            <color key="textColor" red="0.14117647059999999" green="0.74117647060000003" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8B-VO-eyZ">
+                            <rect key="frame" x="5" y="178" width="305" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <color key="textColor" red="0.5490196078431373" green="0.57647058823529407" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="xR4-eC-gh8" firstAttribute="leading" secondItem="mwB-uc-Axz" secondAttribute="leading" id="5g7-h5-zww"/>
+                        <constraint firstItem="eGf-sp-bCN" firstAttribute="top" secondItem="3KE-9m-biV" secondAttribute="bottom" constant="13" id="A1O-Tk-Pzn"/>
+                        <constraint firstItem="tP3-9d-lSR" firstAttribute="top" secondItem="eGf-sp-bCN" secondAttribute="bottom" constant="15" id="DfS-Rb-3gK"/>
+                        <constraint firstItem="L8B-VO-eyZ" firstAttribute="leading" secondItem="mwB-uc-Axz" secondAttribute="leading" constant="5" id="Ggd-PI-tbE"/>
+                        <constraint firstItem="3KE-9m-biV" firstAttribute="top" secondItem="mwB-uc-Axz" secondAttribute="top" constant="33" id="HlH-pV-sKU"/>
+                        <constraint firstItem="eGf-sp-bCN" firstAttribute="centerX" secondItem="mwB-uc-Axz" secondAttribute="centerX" id="Kg2-8V-UXb"/>
+                        <constraint firstAttribute="trailing" secondItem="tP3-9d-lSR" secondAttribute="trailing" constant="5" id="QDP-YW-gSf"/>
+                        <constraint firstItem="xR4-eC-gh8" firstAttribute="top" secondItem="mwB-uc-Axz" secondAttribute="top" id="Sfk-VN-CFA"/>
+                        <constraint firstAttribute="trailing" secondItem="L8B-VO-eyZ" secondAttribute="trailing" constant="5" id="TZJ-bX-cSq"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L8B-VO-eyZ" secondAttribute="bottom" constant="20" id="U6X-s8-W8B"/>
+                        <constraint firstItem="L8B-VO-eyZ" firstAttribute="top" secondItem="tP3-9d-lSR" secondAttribute="bottom" constant="8" id="dAb-hN-xlU"/>
+                        <constraint firstItem="tP3-9d-lSR" firstAttribute="leading" secondItem="mwB-uc-Axz" secondAttribute="leading" constant="5" id="izx-mr-7FK"/>
+                        <constraint firstAttribute="height" constant="265" id="v7N-7z-dR1"/>
+                        <constraint firstItem="3KE-9m-biV" firstAttribute="leading" secondItem="mwB-uc-Axz" secondAttribute="leading" constant="23" id="xiJ-Rb-pIC"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Asf-Ba-bCN">
+                    <rect key="frame" x="0.0" y="265" width="375" height="402"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="oLW-Fc-uQP"/>
+                        <outlet property="delegate" destination="-1" id="2KX-SD-4VK"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Asf-Ba-bCN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DLY-sT-EaW"/>
+                <constraint firstAttribute="bottom" secondItem="Asf-Ba-bCN" secondAttribute="bottom" id="ExV-jo-z7Q"/>
+                <constraint firstItem="mwB-uc-Axz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q26-r6-Git"/>
+                <constraint firstAttribute="trailing" secondItem="mwB-uc-Axz" secondAttribute="trailing" constant="60" id="UdM-Ng-4mn"/>
+                <constraint firstItem="mwB-uc-Axz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="enI-PD-ZyQ"/>
+                <constraint firstAttribute="trailing" secondItem="Asf-Ba-bCN" secondAttribute="trailing" id="rJp-Su-Tf5"/>
+                <constraint firstItem="Asf-Ba-bCN" firstAttribute="top" secondItem="mwB-uc-Axz" secondAttribute="bottom" id="sCZ-iu-eND"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="89.5"/>
+        </view>
+        <tapGestureRecognizer id="6Kn-zZ-uks">
+            <connections>
+                <action selector="ImageViewTapAction:" destination="-1" id="KwJ-Ey-V6z"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ProfilePlaceholder" width="334" height="246"/>
+        <image name="settingsIcon" width="19" height="19"/>
+    </resources>
+</document>

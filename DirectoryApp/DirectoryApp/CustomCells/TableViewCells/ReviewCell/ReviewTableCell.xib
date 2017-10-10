@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Medium.otf">
+            <string>Dosis-Medium</string>
+        </array>
+        <array key="Dosis-Regular.otf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="ReviewTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJq-xN-ueN">
+                        <rect key="frame" x="8" y="23" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="4HV-dB-jMr"/>
+                            <constraint firstAttribute="height" constant="50" id="aZf-Ra-OF6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOQ-uo-QAU">
+                        <rect key="frame" x="73" y="23" width="0.0" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="bOC-qU-WbU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="19"/>
+                        <color key="textColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-ku-HUt">
+                        <rect key="frame" x="347" y="35" width="80" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="hhs-Im-0OI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="12"/>
+                        <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bja-SP-1Qd">
+                        <rect key="frame" x="73" y="49" width="3.5" height="36"/>
+                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="16"/>
+                        <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9m-vU-JPQ">
+                        <rect key="frame" x="8" y="106" width="419" height="1"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="GwG-5y-I8e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="1Rb-ku-HUt" secondAttribute="trailing" id="70G-RM-hoL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="l9m-vU-JPQ" secondAttribute="trailing" id="GE3-bK-d8u"/>
+                    <constraint firstItem="l9m-vU-JPQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="L2i-hD-Odt"/>
+                    <constraint firstItem="bja-SP-1Qd" firstAttribute="top" secondItem="JOQ-uo-QAU" secondAttribute="bottom" constant="3" id="Ndm-yK-UGy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bja-SP-1Qd" secondAttribute="bottom" constant="15" id="QWq-Fq-46x"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="bja-SP-1Qd" secondAttribute="trailing" id="U5X-XR-ZYu"/>
+                    <constraint firstItem="1Rb-ku-HUt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JOQ-uo-QAU" secondAttribute="trailing" constant="3" id="WyM-6V-ItX"/>
+                    <constraint firstItem="JOQ-uo-QAU" firstAttribute="top" secondItem="ZJq-xN-ueN" secondAttribute="top" id="Y2a-O7-GQY"/>
+                    <constraint firstItem="ZJq-xN-ueN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Yti-9J-7YW"/>
+                    <constraint firstItem="bja-SP-1Qd" firstAttribute="leading" secondItem="JOQ-uo-QAU" secondAttribute="leading" id="hpZ-3P-dv6"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="l9m-vU-JPQ" secondAttribute="bottom" constant="-8" id="oGz-DQ-A5e"/>
+                    <constraint firstItem="JOQ-uo-QAU" firstAttribute="leading" secondItem="ZJq-xN-ueN" secondAttribute="trailing" constant="15" id="u8F-gQ-wEC"/>
+                    <constraint firstItem="1Rb-ku-HUt" firstAttribute="centerY" secondItem="JOQ-uo-QAU" secondAttribute="centerY" id="uCW-uX-oDK"/>
+                    <constraint firstItem="JOQ-uo-QAU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="uI2-J2-kKM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="bja-SP-1Qd" id="MTL-tW-RB1"/>
+                <outlet property="imageIcon" destination="ZJq-xN-ueN" id="ymL-ne-KPA"/>
+                <outlet property="nameLabel" destination="JOQ-uo-QAU" id="cPo-Jq-u0y"/>
+                <outlet property="timeLabel" destination="1Rb-ku-HUt" id="1cv-3A-qIB"/>
+            </connections>
+            <point key="canvasLocation" x="43.5" y="46"/>
+        </tableViewCell>
+    </objects>
+</document>
