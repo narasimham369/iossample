@@ -2341,8 +2341,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.gluappdirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a699d962-5416-465d-b1d0-22112e5e1d36";
-				PROVISIONING_PROFILE_SPECIFIER = GluAppDirectory;
+				PROVISIONING_PROFILE = "80f8d2da-9c26-4256-b098-1da5aa0e2a9c";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Store Provisioning Profile: com.smacar.gluappdirectory";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/$(PROJECT_NAME)/DirectoryApp-Prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2384,8 +2384,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smacar.gluappdirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a699d962-5416-465d-b1d0-22112e5e1d36";
-				PROVISIONING_PROFILE_SPECIFIER = GluAppDirectory;
+				PROVISIONING_PROFILE = "80f8d2da-9c26-4256-b098-1da5aa0e2a9c";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Store Provisioning Profile: com.smacar.gluappdirectory";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/$(PROJECT_NAME)/DirectoryApp-Prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
